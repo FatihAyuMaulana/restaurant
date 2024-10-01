@@ -3,14 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> Restaurant | Template </title>
+    <title> Restaurant BIM</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
 	<!-- CSS here -->
-    @stack('styles')
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="assets/css/slicknav.css">
@@ -23,16 +22,21 @@
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/nice-select.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+
+    @stack('styles')
 </head>
 <body>
 
     <!-- Preloader Start -->
-   <x-header>
-    <div id="main-content">
-        @yield('content')
-
-        <x-footer />
+    <div class="app">
+        <x-header />
+        <div id="main-content">
+             @yield('content')
+    
+            <x-footer />
+        </div>
     </div>
+   
     <!-- JS here -->
     @stack('scripts')
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -69,5 +73,5 @@
     <script src="./assets/js/main.js"></script>
     
 
-    </body>
+   </body>
 </html>
