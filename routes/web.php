@@ -11,4 +11,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/menu', App\Http\Controllers\MenuController::class);
-Route::resource('/contact', App\Http\Controllers\ContactController::class);
+Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
+
