@@ -12,8 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('restaurants', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id(); // Primary Key
+            $table->string('nama_cabang'); // Nama cabang restoran
+            $table->string('alamat'); // Alamat restoran
+            $table->string('no_telp'); // Nomor telepon restoran
+            $table->string('foto_restaurant')->nullable(); // Path untuk foto restoran
+            $table->timestamps(); // Kolom created_at dan updated_at
         });
     }
 

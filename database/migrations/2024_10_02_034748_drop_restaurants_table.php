@@ -11,20 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contact', function (Blueprint $table) {
-            $table->id();
-            $table->restaurant_branch();
-            $table->username();
-            $table->email_address();
-            $table->message();
-            $table->timestamps();
+        Schema::table('restaurants', function (Blueprint $table) {
+            //
         });
     }
+
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('contact');
+        Schema::table('restaurants', function (Blueprint $table) {
+            //
+        });
     }
 };
