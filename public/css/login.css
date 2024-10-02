@@ -1,0 +1,38 @@
+/* styles.css */
+body {
+    background-color: #f8f9fa; /* Warna latar belakang yang lembut */
+}
+
+.card {
+    border-radius: 15px; /* Membuat sudut card lebih halus */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.card-header {
+    background-color: #007bff; /* Warna latar belakang header card */
+    color: white; /* Warna teks header */
+    border-top-left-radius: 15px; /* Radius sudut kiri atas */
+    border-top-right-radius: 15px; /* Radius sudut kanan atas */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Warna tombol */
+    border-color: #007bff; /* Warna border tombol */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Warna tombol saat hover */
+    border-color: #0056b3; /* Warna border tombol saat hover */
+}
+
+.form-label {
+    font-weight: bold; /* Membuat label lebih tebal */
+}
+
+.invalid-feedback {
+    font-size: 0.9rem; /* Ukuran font untuk feedback error */
+}
+
+.form-check-label {
+    font-weight: normal; /* Mengatur label checkbox */
+}

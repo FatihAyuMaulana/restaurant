@@ -1,9 +1,20 @@
 @extends('layouts.app')
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/login.css') }}">
+@endpush
+
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6"> <!-- Ubah ukuran kolom untuk tampilan lebih ramping -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <div class="card">
                 <div class="card-header text-center">{{ __('Login') }}</div> <!-- Tambahkan text-center untuk judul -->
 
@@ -12,7 +23,7 @@
                         @csrf
 
                         <div class="mb-3">
-                            <label for="email" class="form-label">{{ __('Email Address') }}</label> <!-- Hapus kol-md-4 untuk label lebih responsif -->
+                            <label for="email" class="form-label">{{ __('Email Address') }}</label>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                             
                             @error('email')
@@ -23,7 +34,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="password" class="form-label">{{ __('Password') }}</label> <!-- Hapus kol-md-4 untuk label lebih responsif -->
+                            <label for="password" class="form-label">{{ __('Password') }}</label>
                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                             
                             @error('password')
@@ -50,6 +61,8 @@
                     </form>
                 </div>
             </div>
+            <br>
+            <br>
         </div>
     </div>
 </div>
