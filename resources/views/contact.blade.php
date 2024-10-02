@@ -13,7 +13,7 @@
                 <div class="card-header">{{ __('Contact Us') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('contact.submit') }}">
+                    <form method="POST" action="{{ route('contact.store') }}">
                         @csrf
 
                         <div class="form-group row">

@@ -6,14 +6,19 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    public function showContactForm()
-{
-    $restaurants = Restaurant::all(); // Mengambil semua cabang restoran
-    return view('contact', compact('restaurants')); // Menggunakan nama variabel yang benar
-}
+    public function index()
+    {
+        $restaurants = Restaurant::all(); // Mengambil semua cabang restoran
+        return view('contact', compact('restaurants'));
+    }
 
+    public function create()
+    {
+        $restaurants = Restaurant::all(); // Mengambil semua cabang restoran
+        return view('contact.create', compact('restaurants')); // Render the create form
+    }
 
-    public function submitContactForm(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'restaurant_id' => 'required|exists:restaurants,id',
@@ -27,5 +32,11 @@ class ContactController extends Controller
         // Message::create($request->all());
 
         return redirect()->route('contact.form')->with('success', 'Your message has been sent successfully!');
+    }
+
+    public function submitContactForm(Request $request)
+    {
+        // You may want to keep this method for handling submissions if it serves a different purpose
+        return $this->store($request);
     }
 }
