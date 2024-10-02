@@ -2,7 +2,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Menu;
-// use App\Http\Controllers\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -10,8 +9,57 @@ class MenuController extends Controller
 {
     public function index()
     {
-        $menus = Menu::all();
+        $menus = [
+            [
+                'name' => 'Steak',
+                'description' => 'Daging sapi panggang dengan kentang dan sayuran.',
+                'price' => 'Rp 130.000',
+                'category' => 'Main Course',
+                'image' => 'steak.jpg',
+            ],
+            [
+                'name' => 'Katsu',
+                'description' => 'Ayam goreng krispi dengan nasi dan saus katsu.',
+                'price' => 'Rp 35.000',
+                'category' => 'Main Course',
+                'image' => 'katsu.jpg',
+            ],
+            [
+                'name' => 'Spagetti Carbonara',
+                'description' => 'Spagetti carbonara yang rasanya sangat creame.',
+                'price' => 'Rp 45.000',
+                'category' => 'Main Course',
+                'image' => 'spagetti.jpg',
+            ],
+            // Tambahkan menu lainnya
+        ];
+
+        // Mengirimkan menu makanan dan minuman ke view
         return view('menu', compact('menus'));
+    }
+
+    public function minuman()
+    {
+        $drinks = [
+            [
+                'name' => 'Es Teh',
+                'description' => 'Teh dingin dengan es batu.',
+                'price' => 'Rp 10.000',
+                'category' => 'Drink',
+                'image' => 'es_teh.jpg',
+            ],
+            [
+                'name' => 'Jus Jeruk',
+                'description' => 'Jus jeruk segar.',
+                'price' => 'Rp 15.000',
+                'category' => 'Drink',
+                'image' => 'jus_jeruk.jpg',
+            ],
+            // Tambahkan minuman lainnya
+        ];
+
+        // Mengirimkan data minuman ke view admin.menu.minuman
+        return view('minuman', compact('drinks'));
     }
 
     public function create()
@@ -43,7 +91,7 @@ class MenuController extends Controller
 
     public function edit(Menu $menu)
     {
-        return view('menus.edit', compact('menus'));
+        return view('menus.edit', compact('menu'));
     }
 
     public function update(Request $request, Menu $menu)

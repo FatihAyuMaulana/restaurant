@@ -116,7 +116,7 @@
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->
                     <div class="about-img ">
-                        <img src="assets/img/gallery/about.png" alt="">
+                        <img src="{{ asset('assets/img/gallery/about.png')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -126,7 +126,7 @@
     <!--? gallery Products Start -->
     <section class="gallery-area fix ">
         <!-- Gallery Top Start -->
-        <div class="gallery-top section-bg pt-90 pb-40" data-background="assets/img/gallery/section_bg01.png">
+        <div class="gallery-top section-bg pt-90 pb-40" data-background="{{ asset('assets/img/gallery/section_bg01.png')}}">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="cl-xl-7 col-lg-8 col-md-10">
@@ -164,7 +164,7 @@
                         <div class="col-lg-5 col-md-6 col-sm-6">
                             <div class="gallery-box">
                                 <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery1.png);"></div>
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery1.png')}}');"></div>
                                     <div class="g-caption">
                                         <span>$25</span>
                                         <h4>Delicious Food</h4>
@@ -177,7 +177,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="gallery-box">
                                 <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery2.png);"></div>
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery2.png')}}');"></div>
                                     <div class="g-caption">
                                         <span>$25</span>
                                         <h4>Delicious Food</h4>
@@ -192,7 +192,7 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="gallery-box">
                                         <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url(assets/img/gallery/gallery3.png);"></div>
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery3.png')}}');"></div>
                                             <div class="g-caption">
                                                 <span>$25</span>
                                                 <h4>Delicious Food</h4>
@@ -205,7 +205,7 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="gallery-box">
                                         <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url(assets/img/gallery/gallery4.png);"></div>
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery4.png')}}');"></div>
                                             <div class="g-caption">
                                                 <span>$25</span>
                                                 <h4>Delicious Food</h4>
@@ -225,7 +225,7 @@
                         <div class="col-lg-5 col-md-6 col-sm-6">
                             <div class="gallery-box">
                                 <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery2.png);"></div>
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery2.png')}}');"></div>
                                     <div class="g-caption">
                                         <span>$25</span>
                                         <h4>Delicious Food</h4>
@@ -238,7 +238,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="gallery-box">
                                 <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery1.png);"></div>
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery1.png')}}');"></div>
                                     <div class="g-caption">
                                         <span>$25</span>
                                         <h4>Delicious Food</h4>
@@ -253,7 +253,7 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="gallery-box">
                                         <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url(assets/img/gallery/gallery3.png);"></div>
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery3.png')}}');"></div>
                                             <div class="g-caption">
                                                 <span>$25</span>
                                                 <h4>Delicious Food</h4>
@@ -266,7 +266,7 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="gallery-box">
                                         <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url(assets/img/gallery/gallery4.png);"></div>
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery4.png')}}');"></div>
                                             <div class="g-caption">
                                                 <span>$25</span>
                                                 <h4>Delicious Food</h4>
@@ -286,7 +286,7 @@
                         <div class="col-lg-5 col-md-6 col-sm-6">
                             <div class="gallery-box">
                                 <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery1.png);"></div>
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery1.png')}}');"></div>
                                     <div class="g-caption">
                                         <span>$25</span>
                                         <h4>Delicious Food</h4>
@@ -299,7 +299,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="gallery-box">
                                 <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery2.png);"></div>
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery2.png')}}');"></div>
                                     <div class="g-caption">
                                         <span>$25</span>
                                         <h4>Delicious Food</h4>
@@ -314,7 +314,7 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="gallery-box">
                                         <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url(assets/img/gallery/gallery3.png);"></div>
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery3.png')}}');"></div>
                                             <div class="g-caption">
                                                 <span>$25</span>
                                                 <h4>Delicious Food</h4>
@@ -327,7 +327,7 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="gallery-box">
                                         <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url(assets/img/gallery/gallery4.png);"></div>
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery4.png')}}');"></div>
                                             <div class="g-caption">
                                                 <span>$25</span>
                                                 <h4>Delicious Food</h4>
@@ -347,7 +347,7 @@
                         <div class="col-lg-5 col-md-6 col-sm-6">
                             <div class="gallery-box">
                                 <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery3.png);"></div>
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery3.png')}}');"></div>
                                     <div class="g-caption">
                                         <span>$25</span>
                                         <h4>Delicious Food</h4>
@@ -360,7 +360,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="gallery-box">
                                 <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery4.png);"></div>
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery4.png')}}');"></div>
                                     <div class="g-caption">
                                         <span>$25</span>
                                         <h4>Delicious Food</h4>
@@ -375,7 +375,7 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="gallery-box">
                                         <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url(assets/img/gallery/gallery1.png);"></div>
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery1.png')}}');"></div>
                                             <div class="g-caption">
                                                 <span>$25</span>
                                                 <h4>Delicious Food</h4>
@@ -388,7 +388,7 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="gallery-box">
                                         <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url(assets/img/gallery/gallery2.png);"></div>
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery2.png')}}');"></div>
                                             <div class="g-caption">
                                                 <span>$25</span>
                                                 <h4>Delicious Food</h4>
@@ -415,7 +415,7 @@
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->
                     <div class="about-img ">
-                        <img src="assets/img/gallery/about2.png" alt="">
+                        <img src="{{ asset('assets/img/gallery/about2.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
@@ -436,7 +436,7 @@
     </div>
     <!-- About-2 Area End -->
     <!--? Booking Room Start-->
-    <div class="booking-area section-bg pt-120 pb-130" data-background="assets/img/gallery/section_bg04.png">
+    <div class="booking-area section-bg pt-120 pb-130" data-background="{{ asset('assets/img/gallery/section_bg04.png')}}">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="cl-xl-7 col-lg-8 col-md-10">
@@ -541,7 +541,7 @@
     </div>
     <!-- Our Services End -->
     <!--? About-3 Start -->
-    <div class="about-area3 pt-180 pb-170 section-bg" data-background="assets/img/gallery/section_bg03.png">
+    <div class="about-area3 pt-180 pb-170 section-bg" data-background="{{ asset('assets/img/gallery/section_bg03.png')}}">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-xl-6 col-lg-6 col-md-9 col-sm-11">
@@ -584,7 +584,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blogs mb-100">
                         <div class="blog-img">
-                            <img src="assets/img/gallery/blog1.png" alt="">
+                            <img src="{{ asset('assets/img/gallery/blog1.png')}}" alt="">
                         </div>
                         <div class="blog-cap">
                             <span class="color1">23 Dec, 2020</span>
@@ -595,7 +595,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blogs mb-100">
                         <div class="blog-img">
-                            <img src="assets/img/gallery/blog2.png" alt="">
+                            <img src="{{ asset('assets/img/gallery/blog2.png')}}" alt="">
                         </div>
                         <div class="blog-cap">
                             <span class="color1">23 Dec, 2020</span>
@@ -606,7 +606,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blogs mb-100">
                         <div class="blog-img">
-                            <img src="assets/img/gallery/blog3.png" alt="">
+                            <img src="{{ asset('assets/img/gallery/blog3.png')}}" alt="">
                         </div>
                         <div class="blog-cap">
                             <span class="color1">23 Dec, 2020</span>
