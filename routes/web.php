@@ -12,3 +12,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/menu', App\Http\Controllers\MenuController::class);
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
+Route::get('/contact', [App\Http\Controllers\ContactController::class, 'showContactForm'])->name('contact.form');
+Route::post('/contact', [App\Http\Controllers\ContactController::class, 'submitContactForm'])->name('contact.submit');

@@ -18,7 +18,7 @@
                                         <ul id="navigation">
                                             <li><a href="{{ route('index')}}">Home</a></li>
                                             <li><a href="{{ url('menu')}}">Menu</a></li>
-                                            <li><a href="{{ route('contact')}}">Contact</a></li>
+                                            <li><a href="{{ url('contact')}}">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
