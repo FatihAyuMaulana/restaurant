@@ -1,6 +1,6 @@
 <footer>
     <!--? Footer Start-->
-    <div class="footer-area section-bg" data-background="assets/img/gallery/section_bg02.png">
+    <div class="footer-area section-bg" data-background="{{ asset('assets/img/gallery/section_bg02.png')}}">
         <div class="container">
             <div class="footer-top footer-padding">
                 <div class="row d-flex justify-content-between">
@@ -8,7 +8,7 @@
                         <div class="single-footer-caption mb-50">
                             <!-- logo -->
                             <div class="footer-logo">
-                                <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                <a href="index.html"><img src="{{ asset('assets/img/logo/logo2_footer.png')}}" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -47,12 +47,12 @@
                             </div>
                             <div class="instagram-gellay">
                                 <ul class="insta-feed">
-                                    <li><a href="#"><img src="assets/img/gallery/instagram1.png" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/gallery/instagram2.png" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/gallery/instagram3.png" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/gallery/instagram4.png" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/gallery/instagram5.png" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/gallery/instagram6.png" alt=""></a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram1.png')}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram2.png')}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram3.png')}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram4.png')}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram5.png')}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram6.png')}}" alt=""></a></li>
                                 </ul>
                             </div>
                         </div>
