@@ -16,6 +16,7 @@ return new class extends Migration
             $table->decimal('harga', 8, 2); // Harga makanan
             $table->string('kategori'); // Kategori makanan: pembuka, utama, penutup
             $table->string('foto_makanan')->nullable(); // Path untuk foto makanan
+            $table->enum('fd', ['makanan','minuman']);
             $table->timestamps(); // Kolom created_at dan updated_at
         });
     }

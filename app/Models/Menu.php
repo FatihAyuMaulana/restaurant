@@ -18,6 +18,7 @@ class Menu extends Model
         'harga',
         'kategori',
         'foto_makanan',
+        'fd',
     ];
 
     public function restaurant()
