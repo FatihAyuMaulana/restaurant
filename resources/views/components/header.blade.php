@@ -23,6 +23,7 @@
                                             <li><a href="{{ route('index')}}">Home</a></li>
                                             <li><a href="{{ url('menu')}}">Menu</a></li>
                                             <li><a href="{{ route('contact')}}">Contact</a></li>
+                                            <li><a href="{{ route('gourmet_spot')}}">Gourmet Spot</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -48,5 +49,5 @@
                 </div>
             </div>
     </div>
-    <!-- Header End -->
+    <!-- Header End -->
 </header>

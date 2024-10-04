@@ -24,12 +24,13 @@
                     <div class="row">
                         <div class="col-xl-9 col-lg-9 col-md-9">
                             <div class="hero__caption">
-                                <span data-animation="fadeInLeft" data-delay=".2s">Discover Your Teste</span>
-                                <h1 data-animation="fadeInLeft" data-delay=".4s">We belive good food offer great smile</h1>
-                                <p data-animation="fadeInLeft" data-delay=".6s">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat is aute irure.</p>
+                                <span data-animation="fadeInLeft" data-delay=".2s">Selamat Datang di Restaurant BIM</span>
+                                <h1 data-animation="fadeInLeft" data-delay=".4s">Kami percaya makanan enak menawarkan senyuman yang menawan</h1>
+                                <p data-animation="fadeInLeft" data-delay=".6s">Jelajahi Dunia Restaurant, Semua yang Anda Butuhkan Ada di Sini.
+                                </p>
                                 <!-- Hero-btn -->
                                 <div class="hero__btn">
-                                    <a href="industries.html" class="btn hero-btn"  data-animation="fadeInLeft" data-delay=".8s">Resurvation</a>
+                                    <a href="industries.html" class="btn hero-btn"  data-animation="fadeInLeft" data-delay=".8s">Reservasi</a>
                                 </div>
                             </div>
                         </div>
@@ -42,9 +43,9 @@
                     <div class="row">
                         <div class="col-xl-9 col-lg-9 col-md-9">
                             <div class="hero__caption">
-                                <span data-animation="fadeInLeft" data-delay=".2s">Discover Your Teste</span>
-                                <h1 data-animation="fadeInLeft" data-delay=".4s">We belive good food offer great smile</h1>
-                                <p data-animation="fadeInLeft" data-delay=".6s">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat is aute irure.</p>
+                                <span data-animation="fadeInLeft" data-delay=".2s">Selamat Datang di Restaurant BIM</span>
+                                <h1 data-animation="fadeInLeft" data-delay=".4s">Kami percaya makanan enak menawarkan senyuman yang menawan</h1>
+                                <p data-animation="fadeInLeft" data-delay=".6s">Jelajahi Dunia Restaurant, Semua yang Anda Butuhkan Ada di Sini.</p>
                                 <!-- Hero-btn -->
                                 <div class="hero__btn">
                                     <a href="industries.html" class="btn hero-btn"  data-animation="fadeInLeft" data-delay=".8s">Resurvation</a>
@@ -77,7 +78,7 @@
                                     <span class="flaticon-restaurant"></span>
                                 </div>
                                 <div class="caption">
-                                    <p>Ut enim ad minim veniam, quis nostrud exer.</p>
+                                    <p>Dengan keahlian yang tak tertandingi, Chef Juna selalu menghadirkan hidangan yang memukau lidah dan mata.</p>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +88,7 @@
                                     <span class="flaticon-tools-and-utensils-1"></span>
                                 </div>
                                 <div class="caption">
-                                    <p>Ut enim ad minim veniam, quis nostrud exer.</p>
+                                    <p>Dengan sentuhan Chef Juna, plating menjadi seni yang memukau, mengubah hidangan menjadi sesuatu yang lebih dari sekadar makanan.</p>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +98,7 @@
                                     <span class="flaticon-hat"></span>
                                 </div>
                                 <div class="caption">
-                                    <p>Ut enim ad minim veniam, quis nostrud exer.</p>
+                                    <p>Kreativitas dan ketelitian Chef Juna menjadikannya salah satu chef terbaik di Indonesia.</p>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +108,7 @@
                                     <span class="flaticon-restaurant"></span>
                                 </div>
                                 <div class="caption">
-                                    <p>Ut enim ad minim veniam, quis nostrud exer.</p>
+                                    <p>Setiap sajian Chef Juna bukan hanya makanan, tapi sebuah pengalaman kuliner yang luar biasa.</p>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +117,7 @@
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->
                     <div class="about-img ">
-                        <img src="{{ asset('assets/img/gallery/about.png')}}" alt="">
+                        <img src="{{ asset('assets/img/gallery/chef juna1.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -124,7 +125,7 @@
     </div>
     <!-- About Area End -->
     <!--? gallery Products Start -->
-    <section class="gallery-area fix ">
+    {{-- <section class="gallery-area fix ">
         <!-- Gallery Top Start -->
         <div class="gallery-top section-bg pt-90 pb-40" data-background="{{ asset('assets/img/gallery/section_bg01.png')}}">
             <div class="container">
@@ -132,8 +133,8 @@
                     <div class="cl-xl-7 col-lg-8 col-md-10">
                         <!-- Section Tittle -->
                         <div class="section-tittle text-center mb-70">
-                            <span>Our Offerd Menu</span>
-                            <h2>Some Trendy And  Popular Courses Offerd</h2>
+                            <span>Menu Penawaran Kami</span>
+                            <h2>Beberapa Kursus Trendi Dan Populer Ditawarkan</h2>
                         </div> 
                     </div>
                 </div>
@@ -142,10 +143,10 @@
                         <!--Nav Button  -->
                         <nav>                                                                         
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Special</a>
-                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"> Lunch</a>
-                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"> Brakefirst </a>
-                                <a class="nav-item nav-link" id="nav-dinner-tab" data-toggle="tab" href="#nav-dinner" role="tab" aria-controls="nav-dinner" aria-selected="false"> Dinner </a>
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"> Spesial </a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"> Makan Siang </a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"> Makan Pagi </a>
+                                <a class="nav-item nav-link" id="nav-dinner-tab" data-toggle="tab" href="#nav-dinner" role="tab" aria-controls="nav-dinner" aria-selected="false"> Makan malam </a>
                             </div>
                         </nav>
                         <!--End Nav Button  -->
@@ -166,7 +167,7 @@
                                 <div class="single-gallery">
                                     <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery1.png')}}');"></div>
                                     <div class="g-caption">
-                                        <span>$25</span>
+                                        <span>Rp. 150.000</span>
                                         <h4>Delicious Food</h4>
                                         <p>Ut enim ad minim veniam quis nostr.</p>
                                         <a href="#" class="btn order-btn">Order Now</a>
@@ -177,11 +178,11 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="gallery-box">
                                 <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery2.png')}}');"></div>
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/Nasi Liwet.jpg')}}');"></div>
                                     <div class="g-caption">
-                                        <span>$25</span>
-                                        <h4>Delicious Food</h4>
-                                        <p>Ut enim ad minim veniam quis nostr.</p>
+                                        <span>Rp 45.000</span>
+                                        <h4>Nasi Liwet</h4>
+                                        <p>Cocok banget buat makan siang.</p>
                                         <a href="#" class="btn order-btn">Order Now</a>
                                     </div>
                                 </div>
@@ -406,7 +407,7 @@
             <!-- End Nav Card -->
         </div>
         <!-- Gallery Bottom End -->
-    </section>
+    </section> --}}
     <!-- gallery Products End -->
     <!--? About-2 Area Start -->
     <div class="about-area2 section-padding30">
@@ -415,19 +416,19 @@
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->
                     <div class="about-img ">
-                        <img src="{{ asset('assets/img/gallery/about2.png')}}" alt="">
+                        <img src="{{ asset('assets/img/gallery/steak4.jpg')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="about-caption mb-50">
                         <!-- Section Tittle -->
                         <div class="section-tittle mb-35">
-                            <span>About Our Restaurant</span>
-                            <h2>We Provide Good Food  For Your Family!</h2>
+                            <span>Tentang Restoran Kami</span>
+                            <h2>Menu Wajib Coba yang Selalu Menjadi Favorit</h2>
                         </div>
-                        <p class="pera-top">Ut enim acgsd minim veniam, quxcis nostrud exercitation ullamco laboris nisi ufsit aliquip ex ea commodo consequat is aute irure m, quis nostrud exer</p>
+                        <p class="pera-top">Mencari yang terbaik? Steak kami adalah pilihan para pengunjung setia. Nikmati sendiri kelezatan steak yang menjadi menu andalan di Restaurant BIM.</p>
 
-                        <p  class="mb-65 pera-bottom">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected our, or randomised words which don't look even slightly believab If you are going to use a passage.</p>
+                        <p  class="mb-65 pera-bottom">Steak kami telah menjadi menu terpopuler di BIM, karena perpaduan sempurna antara rasa, tekstur, dan penyajiannya yang elegan.</p>
                         <a href="about.html" class="border-btn">Learn More</a>
                     </div>
                 </div>
