@@ -437,7 +437,7 @@
     </div>
     <!-- About-2 Area End -->
     <!--? Booking Room Start-->
-    <div class="booking-area section-bg pt-120 pb-130" data-background="{{ asset('assets/img/gallery/section_bg04.png')}}">
+    {{-- <div class="booking-area section-bg pt-120 pb-130" data-background="{{ asset('assets/img/gallery/section_bg04.png')}}">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="cl-xl-7 col-lg-8 col-md-10">
@@ -489,7 +489,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Booking Room End-->
     <!--? Our Services Start -->
     <div class="our-services section-padding30">
