@@ -47,7 +47,7 @@
                                     <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/steak4.jpg')}}');"></div>
                                     <div class="g-caption">
                                         <span>Rp. 500.000 </span>
-                                        <h4>Steak Premium BIM</h4>
+                                        <h4>Beef Premium BIM</h4>
                                         <p>Sensasi Daging Berkualitas dengan Rasa yang Tak Tertandingi.</p>
                                         <a href="#" class="btn order-btn">Order Now</a>
                                     </div>
@@ -168,11 +168,37 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="gallery-box">
                                         <div class="single-gallery">
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/steak4.jpg')}}');"></div>
+                                            <div class="g-caption">
+                                                <span>Rp. 500.000</span>
+                                                <h4>Beef Premium BIM</h4>
+                                                <p>Sensasi Daging Berkualitas dengan Rasa yang Tak Tertandingi.</p>
+                                                <a href="#" class="btn order-btn">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-6 col-sm-6">
+                                    <div class="gallery-box">
+                                        <div class="single-gallery">
                                             <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery3.png')}}');"></div>
                                             <div class="g-caption">
                                                 <span>Rp. 180.000</span>
                                                 <h4>Cheese Crust Meal</h4>
                                                 <p>Hidangan Lezat dengan Kelezatan Keju yang Menggoda.</p>
+                                                <a href="#" class="btn order-btn">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-6 col-sm-6">
+                                    <div class="gallery-box">
+                                        <div class="single-gallery">
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/steak6.jpg')}}');"></div>
+                                            <div class="g-caption">
+                                                <span>Rp. 140.000</span>
+                                                <h4>Steak Mashroom</h4>
+                                                <p>Steak juicy dengan sentuhan saus jamur yang creamy dan kaya rasa.</p>
                                                 <a href="#" class="btn order-btn">Order Now</a>
                                             </div>
                                         </div>
@@ -249,11 +275,11 @@
                         <div class="col-lg-5 col-md-6 col-sm-6">
                             <div class="gallery-box">
                                 <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery3.png')}}');"></div>
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/dessert matcha.jpg')}}');"></div>
                                     <div class="g-caption">
-                                        <span>$25</span>
-                                        <h4>Delicious Food</h4>
-                                        <p>Ut enim ad minim veniam quis nostr.</p>
+                                        <span>Rp. 85.000</span>
+                                        <h4>Matcha Sensation</h4>
+                                        <p>Dessert Matcha dengan Tekstur Halus dan Rasa Otentik.</p>
                                         <a href="#" class="btn order-btn">Order Now</a>
                                     </div>
                                 </div>
@@ -262,11 +288,11 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="gallery-box">
                                 <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery4.png')}}');"></div>
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/dessert mango.jpg')}}');"></div>
                                     <div class="g-caption">
-                                        <span>$25</span>
-                                        <h4>Delicious Food</h4>
-                                        <p>Ut enim ad minim veniam quis nostr.</p>
+                                        <span>Rp. 90.000</span>
+                                        <h4>Dessert Mango</h4>
+                                        <p>Kelembutan buah yang meledak dengan rasa di lidahmu.</p>
                                         <a href="#" class="btn order-btn">Order Now</a>
                                     </div>
                                 </div>
@@ -277,11 +303,11 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="gallery-box">
                                         <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery1.png')}}');"></div>
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/pancake redvelvet.jpg')}}');"></div>
                                             <div class="g-caption">
-                                                <span>$25</span>
-                                                <h4>Delicious Food</h4>
-                                                <p>Ut enim ad minim veniam quis nostr.</p>
+                                                <span>Rp. 55.000</span>
+                                                <h4>Pancake Redvelvet</h4>
+                                                <p>Rasa red velvet klasik dalam bentuk pancake yang fluffy dan lezat.</p>
                                                 <a href="#" class="btn order-btn">Order Now</a>
                                             </div>
                                         </div>
@@ -290,11 +316,11 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="gallery-box">
                                         <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery2.png')}}');"></div>
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/macaron blueberry1.jpg')}}');"></div>
                                             <div class="g-caption">
-                                                <span>$25</span>
-                                                <h4>Delicious Food</h4>
-                                                <p>Ut enim ad minim veniam quis nostr.</p>
+                                                <span>Rp. 45.000</span>
+                                                <h4>Macaron Blueberry</h4>
+                                                <p>Kombinasi sempurna antara manis dan segar dalam setiap gigitan blueberry macaron.</p>
                                                 <a href="#" class="btn order-btn">Order Now</a>
                                             </div>
                                         </div>

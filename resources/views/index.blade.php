@@ -78,7 +78,7 @@
                                     <span class="flaticon-restaurant"></span>
                                 </div>
                                 <div class="caption">
-                                    <p>Ut enim ad minim veniam, quis nostrud exer.</p>
+                                    <p>Dengan keahlian yang tak tertandingi, Chef Juna selalu menghadirkan hidangan yang memukau lidah dan mata.</p>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                                     <span class="flaticon-tools-and-utensils-1"></span>
                                 </div>
                                 <div class="caption">
-                                    <p>Ut enim ad minim veniam, quis nostrud exer.</p>
+                                    <p>Dengan sentuhan Chef Juna, plating menjadi seni yang memukau, mengubah hidangan menjadi sesuatu yang lebih dari sekadar makanan.</p>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                                     <span class="flaticon-hat"></span>
                                 </div>
                                 <div class="caption">
-                                    <p>Ut enim ad minim veniam, quis nostrud exer.</p>
+                                    <p>Kreativitas dan ketelitian Chef Juna menjadikannya salah satu chef terbaik di Indonesia.</p>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                                     <span class="flaticon-restaurant"></span>
                                 </div>
                                 <div class="caption">
-                                    <p>Ut enim ad minim veniam, quis nostrud exer.</p>
+                                    <p>Setiap sajian Chef Juna bukan hanya makanan, tapi sebuah pengalaman kuliner yang luar biasa.</p>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +117,7 @@
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->
                     <div class="about-img ">
-                        <img src="{{ asset('assets/img/gallery/about.png')}}" alt="">
+                        <img src="{{ asset('assets/img/gallery/chef juna1.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -416,7 +416,7 @@
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->
                     <div class="about-img ">
-                        <img src="{{ asset('assets/img/gallery/steak.jpg')}}" alt="">
+                        <img src="{{ asset('assets/img/gallery/steak4.jpg')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
