@@ -23,11 +23,20 @@
                                             <li><a href="{{ route('index')}}">Home</a></li>
                                             <li><a href="{{ url('menu')}}">Menu</a></li>
                                             <li><a href="{{ route('contact')}}">Contact</a></li>
+                                            <li><a href="{{ route('gourmet_spot')}}">Gourmet Spot</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                                 <div class="header-right-btn f-right d-none d-lg-block ml-20">
+                                    @if(Auth::check())
+                                        <a href="#" onclick="$('#form-logout').submit()" class="border-btn header-btn">Logout</a>
+                                        <form id="form-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    @else
                                     <a href="{{ route('login')}}" class="border-btn header-btn">Login</a>
+
+                                    @endif
                                 </div>
                             </div>
                         </div>   

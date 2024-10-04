@@ -124,7 +124,7 @@
     </div>
     <!-- About Area End -->
     <!--? gallery Products Start -->
-    <section class="gallery-area fix ">
+    {{-- <section class="gallery-area fix ">
         <!-- Gallery Top Start -->
         <div class="gallery-top section-bg pt-90 pb-40" data-background="{{ asset('assets/img/gallery/section_bg01.png')}}">
             <div class="container">
@@ -406,7 +406,7 @@
             <!-- End Nav Card -->
         </div>
         <!-- Gallery Bottom End -->
-    </section>
+    </section> --}}
     <!-- gallery Products End -->
     <!--? About-2 Area Start -->
     <div class="about-area2 section-padding30">
