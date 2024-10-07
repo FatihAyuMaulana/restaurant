@@ -429,7 +429,6 @@
                         <p class="pera-top">Mencari yang terbaik? Steak kami adalah pilihan para pengunjung setia. Nikmati sendiri kelezatan steak yang menjadi menu andalan di Restaurant BIM.</p>
 
                         <p  class="mb-65 pera-bottom">Steak kami telah menjadi menu terpopuler di BIM, karena perpaduan sempurna antara rasa, tekstur, dan penyajiannya yang elegan.</p>
-                        <a href="about.html" class="border-btn">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -541,33 +540,6 @@
         </div>
     </div>
     <!-- Our Services End -->
-    <!--? About-3 Start -->
-    <div class="about-area3 pt-180 pb-170 section-bg" data-background="{{ asset('assets/img/gallery/section_bg03.png')}}">
-        <div class="container">
-            <div class="row justify-content-end">
-                <div class="col-xl-6 col-lg-6 col-md-9 col-sm-11">
-                    <!-- Section Tittle -->
-                    <div class="section-tittle section-tittle2 mb-40">
-                        <span>About Our Restaurant</span>
-                        <h2>We Provide Good Food For Your Family!</h2>
-                        <p>Ut enim acgsd minim veniam, quxcis nostrud exercitation ullamco laboris nisi ufsit aliquip ex ea commodo consequat is aute irure m, quis nostrud exer.</p>
-                    </div> 
-                    <!--Hero form -->
-                    <form action="#" class="search-box">
-                        <div class="input-form">
-                            <input type="text" placeholder="Your Email">
-                        </div>
-                        <div class="search-form">
-                            <button>Subscribe</button>
-                        </div>	
-                    </form>	
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
     <!-- About-3 End -->
     <!--? Blog Area Start -->
     <section class="blogs-area section-padding30">

@@ -99,6 +99,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Card two -->
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <div class="row no-gutters">
@@ -125,6 +126,17 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="gallery-box">
+                                <div class="single-gallery">
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/Air Fryer Calamari.jpg')}}');"></div>
+                                    <div class="g-caption">
+                                        <span>Rp. 45.000</span>
+                                        <h4>Air Fryer Calamari</h4>
+                                        <p>Marinasi yang tepat dan bumbu pilihan membuat setiap suapan menjadi pengalaman yang menggoda.</p>
+                                        <a href="#" class="btn order-btn">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="gallery-box">
@@ -145,6 +157,17 @@
                                         <span>Rp. 125.000</span>
                                         <h4>Josh Emett's Bouillabaisse</h4>
                                         <p>Hidangan Laut yang Menggugah Selera dengan Sentuhan Khas.</p>
+                                        <a href="#" class="btn order-btn">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-box">
+                                <div class="single-gallery">
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/pizza1.jpg')}}');"></div>
+                                    <div class="g-caption">
+                                        <span>Rp. 185.000</span>
+                                        <h4>Pizza Cheese</h4>
+                                        <p>Kombinasi keju mozzarella dan keju lainnya yang meleleh sempurna, menciptakan tekstur yang luar biasa dan rasa yang sangat kaya.</p>
                                         <a href="#" class="btn order-btn">Order Now</a>
                                     </div>
                                 </div>
@@ -199,6 +222,32 @@
                                                 <span>Rp. 140.000</span>
                                                 <h4>Steak Mashroom</h4>
                                                 <p>Steak juicy dengan sentuhan saus jamur yang creamy dan kaya rasa.</p>
+                                                <a href="#" class="btn order-btn">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-6 col-sm-6">
+                                    <div class="gallery-box">
+                                        <div class="single-gallery">
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/Salmon Delight.jpg')}}');"></div>
+                                            <div class="g-caption">
+                                                <span>Rp. 110.000</span>
+                                                <h4>Salmon Delight</h4>
+                                                <p>Sensasi Rasa yang Mewah</p>
+                                                <a href="#" class="btn order-btn">Order Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-6 col-sm-6">
+                                    <div class="gallery-box">
+                                        <div class="single-gallery">
+                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/Sop Buntut Klasik.jpg')}}');"></div>
+                                            <div class="g-caption">
+                                                <span>Rp. 75.000</span>
+                                                <h4>Sop Buntut Klasik</h4>
+                                                <p> Kami menggunakan buntut sapi pilihan yang dimasak hingga empuk dan melepaskan cita rasa terbaiknya.</p>
                                                 <a href="#" class="btn order-btn">Order Now</a>
                                             </div>
                                         </div>
