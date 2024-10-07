@@ -1,0 +1,61 @@
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Memastikan padding dan margin tidak mempengaruhi ukuran elemen */
+}
+
+body {
+    background-color: #f4f4f4; /* Warna latar belakang yang lebih lembut */
+    font-family: Arial, sans-serif; /* Mengatur font untuk seluruh halaman */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Memastikan body setidaknya setinggi viewport */
+}
+
+.container {
+    flex: 1; /* Memungkinkan kontainer untuk mengisi ruang yang tersedia */
+    display: flex;
+    align-items: center; /* Menyelaraskan konten secara vertikal */
+    justify-content: center; /* Menyelaraskan konten secara horizontal */
+    padding: 20px; /* Memberikan padding di sekitar kontainer */
+}
+
+.card {
+    background-color: #ffffff; /* Warna latar belakang card */
+    border-radius: 8px; /* Sudut membulat untuk card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk card */
+    width: 100%; /* Memastikan card mengambil lebar penuh */
+    max-width: 500px; /* Membatasi lebar maksimum card */
+    margin-bottom: 20px; /* Memberikan jarak antara card dan footer */
+    padding: 20px; /* Padding di dalam card */
+}
+
+.card form {
+    display: flex;
+    flex-direction: column; /* Mengatur form agar elemen berada dalam kolom */
+}
+
+.card input {
+    border: 1px solid #ced4da; /* Border untuk input */
+    border-radius: 5px; /* Sudut membulat untuk input */
+    padding: 10px; /* Padding di dalam input */
+    margin-bottom: 15px; /* Jarak antara input */
+    transition: border-color 0.3s; /* Transisi untuk efek hover */
+}
+
+.card input:focus {
+    border-color: #80bdff; /* Warna border saat input fokus */
+    outline: none; /* Menghilangkan outline default */
+}
+
+footer {
+    background-color: #343a40; /* Warna latar belakang footer */
+    color: #ffffff; /* Warna teks footer */
+    padding: 10px 0; /* Padding atas dan bawah */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    position: relative; /* Memastikan footer tetap di bawah */
+    bottom: 0; /* Menempatkan footer di bagian bawah */
+    width: 100%; /* Memastikan footer mengambil lebar penuh */
+}

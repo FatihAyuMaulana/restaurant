@@ -35,6 +35,7 @@
                                         </form>
                                     @else
                                     <a href="{{ route('login')}}" class="border-btn header-btn">Login</a>
+                                    <a href="{{ route('register')}}" class="border-btn header-btn">Register</a>
 
                                     @endif
                                 </div>

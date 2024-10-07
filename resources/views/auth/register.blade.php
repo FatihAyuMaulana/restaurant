@@ -1,9 +1,17 @@
 @extends('layouts.app')
 
+{{-- @push('styles')
+<link rel="stylesheet" href="{{ asset('css/register.css') }}">
+@endpush --}}
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <br>
+            <br>
+            <br>
+            <br>
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
@@ -63,7 +71,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="border-btn header-btn-register">
                                     {{ __('Register') }}
                                 </button>
                             </div>
@@ -71,6 +79,8 @@
                     </form>
                 </div>
             </div>
+            <br>
+            <br>
         </div>
     </div>
 </div>
