@@ -45,4 +45,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function isAdmin()
+    {
+        return $this->hakakses === 'admin'; // Asumsikan ada kolom 'role' di tabel users
+    }
 }
