@@ -16,47 +16,105 @@
     </div>
 <main>
     <!--? slider Area Start-->
-    <div class="slider-area ">
-        <div class="slider-active">
-            <!-- Single Slider -->
-            <div class="single-slider slider-height d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-9 col-lg-9 col-md-9">
-                            <div class="hero__caption">
-                                <span data-animation="fadeInLeft" data-delay=".2s">Selamat Datang di Restaurant BIM</span>
-                                <h1 data-animation="fadeInLeft" data-delay=".4s">Kami percaya makanan enak menawarkan senyuman yang menawan</h1>
-                                <p data-animation="fadeInLeft" data-delay=".6s">Jelajahi Dunia Restaurant, Semua yang Anda Butuhkan Ada di Sini.
-                                </p>
-                                <!-- Hero-btn -->
-                                <div class="hero__btn">
-                                    <a href="industries.html" class="btn hero-btn"  data-animation="fadeInLeft" data-delay=".8s">Reservasi</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Slider -->
-            <div class="single-slider slider-height d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-9 col-lg-9 col-md-9">
-                            <div class="hero__caption">
-                                <span data-animation="fadeInLeft" data-delay=".2s">Selamat Datang di Restaurant BIM</span>
-                                <h1 data-animation="fadeInLeft" data-delay=".4s">Kami percaya makanan enak menawarkan senyuman yang menawan</h1>
-                                <p data-animation="fadeInLeft" data-delay=".6s">Jelajahi Dunia Restaurant, Semua yang Anda Butuhkan Ada di Sini.</p>
-                                <!-- Hero-btn -->
-                                <div class="hero__btn">
-                                    <a href="industries.html" class="btn hero-btn"  data-animation="fadeInLeft" data-delay=".8s">Resurvation</a>
-                                </div>
-                            </div>
+    <div class="single-slider slider-height d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-lg-9 col-md-9">
+                    <div class="hero__caption">
+                        <span data-animation="fadeInLeft" data-delay=".2s">Selamat Datang di Restaurant BIM</span>
+                        <h1 data-animation="fadeInLeft" data-delay=".4s">Kami percaya makanan enak menawarkan senyuman yang menawan</h1>
+                        <p data-animation="fadeInLeft" data-delay=".6s">Jelajahi Dunia Restaurant, Semua yang Anda Butuhkan Ada di Sini.</p>
+                        <!-- Hero-btn -->
+                        <div class="hero__btn">
+                            <a href="industries.html" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s" id="reservasiBtn">Reservasi</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
+    <!-- Custom Modal -->
+    <div id="customAlert" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Harap login terlebih dahulu untuk mengakses reservasi.</p>
+      </div>
+    </div>
+    
+    <style>
+    /* Modal styling */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    }
+    
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto; 
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; 
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+    
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .modal p {
+      font-size: 18px;
+      color: #333;
+    }
+    </style>
+    
+    <script>
+        // Get the modal
+        var modal = document.getElementById("customAlert");
+    
+        // Get the button that opens the modal
+        var btn = document.getElementById("reservasiBtn");
+    
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+    
+        // When the user clicks on the button, open the modal
+        btn.onclick = function(event) {
+            event.preventDefault();
+            modal.style.display = "block";
+        }
+    
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
     <!-- slider Area End-->
     <!--? About Area Start -->
     <div class="about-low-area section-padding30">
@@ -78,7 +136,7 @@
                                     <span class="flaticon-restaurant"></span>
                                 </div>
                                 <div class="caption">
-                                    <p>Dengan keahlian yang tak tertandingi, Chef Juna selalu menghadirkan hidangan yang memukau lidah dan mata.</p>
+                                    <p>Dengan keahlian yang tak tertandingi, Chef selalu menghadirkan hidangan yang memukau lidah dan mata.</p>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +175,7 @@
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->
                     <div class="about-img ">
-                        <img src="{{ asset('assets/img/gallery/chef juna1.jpg')}}" alt="">
+                        <img src="{{ asset('assets/img/gallery/chefkorea.jpeg')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -125,289 +183,6 @@
     </div>
     <!-- About Area End -->
     <!--? gallery Products Start -->
-    {{-- <section class="gallery-area fix ">
-        <!-- Gallery Top Start -->
-        <div class="gallery-top section-bg pt-90 pb-40" data-background="{{ asset('assets/img/gallery/section_bg01.png')}}">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="cl-xl-7 col-lg-8 col-md-10">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle text-center mb-70">
-                            <span>Menu Penawaran Kami</span>
-                            <h2>Beberapa Kursus Trendi Dan Populer Ditawarkan</h2>
-                        </div> 
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="properties__button">
-                        <!--Nav Button  -->
-                        <nav>                                                                         
-                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"> Spesial </a>
-                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"> Makan Siang </a>
-                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"> Makan Pagi </a>
-                                <a class="nav-item nav-link" id="nav-dinner-tab" data-toggle="tab" href="#nav-dinner" role="tab" aria-controls="nav-dinner" aria-selected="false"> Makan malam </a>
-                            </div>
-                        </nav>
-                        <!--End Nav Button  -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Gallery Top End -->
-        <!-- Gallery Bottom Start -->
-        <div class="container-fluid p-0">
-            <!-- Nav Card -->
-            <div class="tab-content" id="nav-tabContent">
-                <!-- card one -->
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                    <div class="row no-gutters">
-                        <div class="col-lg-5 col-md-6 col-sm-6">
-                            <div class="gallery-box">
-                                <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery1.png')}}');"></div>
-                                    <div class="g-caption">
-                                        <span>Rp. 150.000</span>
-                                        <h4>Delicious Food</h4>
-                                        <p>Ut enim ad minim veniam quis nostr.</p>
-                                        <a href="#" class="btn order-btn">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="gallery-box">
-                                <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/Nasi Liwet.jpg')}}');"></div>
-                                    <div class="g-caption">
-                                        <span>Rp 45.000</span>
-                                        <h4>Nasi Liwet</h4>
-                                        <p>Cocok banget buat makan siang.</p>
-                                        <a href="#" class="btn order-btn">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-12">
-                            <div class="row no-gutters">
-                                <div class="col-lg-12 col-md-6 col-sm-6">
-                                    <div class="gallery-box">
-                                        <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery3.png')}}');"></div>
-                                            <div class="g-caption">
-                                                <span>$25</span>
-                                                <h4>Delicious Food</h4>
-                                                <p>Ut enim ad minim veniam quis nostr.</p>
-                                                <a href="#" class="btn order-btn">Order Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-6 col-sm-6">
-                                    <div class="gallery-box">
-                                        <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery4.png')}}');"></div>
-                                            <div class="g-caption">
-                                                <span>$25</span>
-                                                <h4>Delicious Food</h4>
-                                                <p>Ut enim ad minim veniam quis nostr.</p>
-                                                <a href="#" class="btn order-btn">Order Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card two -->
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    <div class="row no-gutters">
-                        <div class="col-lg-5 col-md-6 col-sm-6">
-                            <div class="gallery-box">
-                                <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery2.png')}}');"></div>
-                                    <div class="g-caption">
-                                        <span>$25</span>
-                                        <h4>Delicious Food</h4>
-                                        <p>Ut enim ad minim veniam quis nostr.</p>
-                                        <a href="#" class="btn order-btn">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="gallery-box">
-                                <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery1.png')}}');"></div>
-                                    <div class="g-caption">
-                                        <span>$25</span>
-                                        <h4>Delicious Food</h4>
-                                        <p>Ut enim ad minim veniam quis nostr.</p>
-                                        <a href="#" class="btn order-btn">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-12">
-                            <div class="row no-gutters">
-                                <div class="col-lg-12 col-md-6 col-sm-6">
-                                    <div class="gallery-box">
-                                        <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery3.png')}}');"></div>
-                                            <div class="g-caption">
-                                                <span>$25</span>
-                                                <h4>Delicious Food</h4>
-                                                <p>Ut enim ad minim veniam quis nostr.</p>
-                                                <a href="#" class="btn order-btn">Order Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-6 col-sm-6">
-                                    <div class="gallery-box">
-                                        <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery4.png')}}');"></div>
-                                            <div class="g-caption">
-                                                <span>$25</span>
-                                                <h4>Delicious Food</h4>
-                                                <p>Ut enim ad minim veniam quis nostr.</p>
-                                                <a href="#" class="btn order-btn">Order Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card three -->
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                    <div class="row no-gutters">
-                        <div class="col-lg-5 col-md-6 col-sm-6">
-                            <div class="gallery-box">
-                                <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery1.png')}}');"></div>
-                                    <div class="g-caption">
-                                        <span>$25</span>
-                                        <h4>Delicious Food</h4>
-                                        <p>Ut enim ad minim veniam quis nostr.</p>
-                                        <a href="#" class="btn order-btn">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="gallery-box">
-                                <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery2.png')}}');"></div>
-                                    <div class="g-caption">
-                                        <span>$25</span>
-                                        <h4>Delicious Food</h4>
-                                        <p>Ut enim ad minim veniam quis nostr.</p>
-                                        <a href="#" class="btn order-btn">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-12">
-                            <div class="row no-gutters">
-                                <div class="col-lg-12 col-md-6 col-sm-6">
-                                    <div class="gallery-box">
-                                        <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery3.png')}}');"></div>
-                                            <div class="g-caption">
-                                                <span>$25</span>
-                                                <h4>Delicious Food</h4>
-                                                <p>Ut enim ad minim veniam quis nostr.</p>
-                                                <a href="#" class="btn order-btn">Order Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-6 col-sm-6">
-                                    <div class="gallery-box">
-                                        <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery4.png')}}');"></div>
-                                            <div class="g-caption">
-                                                <span>$25</span>
-                                                <h4>Delicious Food</h4>
-                                                <p>Ut enim ad minim veniam quis nostr.</p>
-                                                <a href="#" class="btn order-btn">Order Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card Four -->
-                <div class="tab-pane fade" id="nav-dinner" role="tabpanel" aria-labelledby="nav-dinner">
-                    <div class="row no-gutters">
-                        <div class="col-lg-5 col-md-6 col-sm-6">
-                            <div class="gallery-box">
-                                <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery3.png')}}');"></div>
-                                    <div class="g-caption">
-                                        <span>$25</span>
-                                        <h4>Delicious Food</h4>
-                                        <p>Ut enim ad minim veniam quis nostr.</p>
-                                        <a href="#" class="btn order-btn">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="gallery-box">
-                                <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/gallery4.png')}}');"></div>
-                                    <div class="g-caption">
-                                        <span>$25</span>
-                                        <h4>Delicious Food</h4>
-                                        <p>Ut enim ad minim veniam quis nostr.</p>
-                                        <a href="#" class="btn order-btn">Order Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-12">
-                            <div class="row no-gutters">
-                                <div class="col-lg-12 col-md-6 col-sm-6">
-                                    <div class="gallery-box">
-                                        <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery1.png')}}');"></div>
-                                            <div class="g-caption">
-                                                <span>$25</span>
-                                                <h4>Delicious Food</h4>
-                                                <p>Ut enim ad minim veniam quis nostr.</p>
-                                                <a href="#" class="btn order-btn">Order Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-6 col-sm-6">
-                                    <div class="gallery-box">
-                                        <div class="single-gallery">
-                                            <div class="gallery-img smoll-img" style="background-image: url('{{ asset('assets/img/gallery/gallery2.png')}}');"></div>
-                                            <div class="g-caption">
-                                                <span>$25</span>
-                                                <h4>Delicious Food</h4>
-                                                <p>Ut enim ad minim veniam quis nostr.</p>
-                                                <a href="#" class="btn order-btn">Order Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Nav Card -->
-        </div>
-        <!-- Gallery Bottom End -->
-    </section> --}}
     <!-- gallery Products End -->
     <!--? About-2 Area Start -->
     <div class="about-area2 section-padding30">
@@ -429,7 +204,7 @@
                         <p class="pera-top">Mencari yang terbaik? Steak kami adalah pilihan para pengunjung setia. Nikmati sendiri kelezatan steak yang menjadi menu andalan di Restaurant BIM.</p>
 
                         <p  class="mb-65 pera-bottom">Steak kami telah menjadi menu terpopuler di BIM, karena perpaduan sempurna antara rasa, tekstur, dan penyajiannya yang elegan.</p>
-                        <a href="about.html" class="border-btn">Learn More</a>
+                        {{-- <a href="about.html" class="border-btn">Learn More</a> --}}
                     </div>
                 </div>
             </div>
@@ -542,7 +317,7 @@
     </div>
     <!-- Our Services End -->
     <!--? About-3 Start -->
-    <div class="about-area3 pt-180 pb-170 section-bg" data-background="{{ asset('assets/img/gallery/section_bg03.png')}}">
+    {{-- <div class="about-area3 pt-180 pb-170 section-bg" data-background="{{ asset('assets/img/gallery/section_bg03.png')}}">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-xl-6 col-lg-6 col-md-9 col-sm-11">
@@ -564,7 +339,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
 
