@@ -1,10 +1,14 @@
-@extends('layouts.app')  <!-- Extend layout utama jika ada -->
+@extends('layouts.app')
 
 @section('content')
-<div class="container mt-4">  <!-- Tambahkan margin-top -->
-    <h1 class="mb-4">Buat Menu Baru</h1>  <!-- Tambahkan margin-bottom -->
-    
-    <!-- Menampilkan error jika ada -->
+<br>
+<br>
+<br>
+
+<div class="container">
+    <h1>Add New Menu</h1>
+
+    <!-- Display validation errors -->
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -15,57 +19,63 @@
         </div>
     @endif
 
-    <!-- Form untuk membuat menu baru -->
-    <form action="{{ route('menus.store') }}" method="POST" enctype="multipart/form-data">
-        @csrf  <!-- Token CSRF untuk keamanan -->
-        
+    <!-- Menu creation form -->
+    <form action="{{ route('menu.store') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+
         <!-- Restaurant ID -->
-        <div class="form-group mb-3">  <!-- Tambahkan margin-bottom -->
-            <label for="restaurant_id">Restaurant</label>
-            <select name="restaurant_id" id="restaurant_id" class="form-control">
-                <!-- Loop untuk restaurant_id, diasumsikan variabel restaurants sudah dikirim dari controller -->
-                @foreach($restaurants as $restaurant)
-                    <option value="{{ $restaurant->id }}">{{ $restaurant->nama_restoran }}</option>
+        {{-- <div class="mb-3">
+            <label for="restaurant_id" class="form-label">Restaurant</label>
+            <select class="form-control" id="restaurant_id" name="restaurant_id" required>
+                @foreach ($restaurants as $restaurant)
+                    <option value="{{ $restaurant->id }}">{{ $restaurant->name }}</option>
                 @endforeach
             </select>
-        </div>
+        </div> --}}
 
         <!-- Nama Makanan -->
-        <div class="form-group mb-3">  <!-- Tambahkan margin-bottom -->
-            <label for="nama_makanan">Nama Makanan</label>
-            <input type="text" name="nama_makanan" class="form-control" id="nama_makanan" value="{{ old('nama_makanan') }}" required>
-        </div>
-
-        <!-- Deskripsi -->
-        <div class="form-group mb-3">  <!-- Tambahkan margin-bottom -->
-            <label for="deskripsi">Deskripsi</label>
-            <textarea name="deskripsi" class="form-control" id="deskripsi" rows="3" required>{{ old('deskripsi') }}</textarea>
+        <div class="mb-3">
+            <label for="nama_makanan" class="form-label">Nama Makanan</label>
+            <input type="text" class="form-control" id="nama_makanan" name="nama_makanan" value="{{ old('nama_makanan') }}" required>
         </div>
 
         <!-- Harga -->
-        <div class="form-group mb-3">  <!-- Tambahkan margin-bottom -->
-            <label for="harga">Harga</label>
-            <input type="number" name="harga" class="form-control" id="harga" value="{{ old('harga') }}" required>
+        <div class="mb-3">
+            <label for="harga" class="form-label">Harga</label>
+            <input type="number" class="form-control" id="harga" name="harga" step="0.01" value="{{ old('harga') }}" required>
+        </div>
+
+        <!-- Deskripsi -->
+        <div class="mb-3">
+            <label for="deskripsi" class="form-label">Deskripsi</label>
+            <textarea class="form-control" id="deskripsi" name="deskripsi">{{ old('deskripsi') }}</textarea>
         </div>
 
         <!-- Kategori -->
-        <div class="form-group mb-3">  <!-- Tambahkan margin-bottom -->
-            <label for="kategori">Kategori</label>
-            <select name="kategori" id="kategori" class="form-control" required>
-                <option value="makanan pembuka">Makanan Pembuka</option>
-                <option value="makanan utama">Makanan Utama</option>
-                <option value="makanan penutup">Makanan Penutup</option>
-            </select>
+        <div class="mb-3">
+            <label for="kategori" class="form-label">Kategori</label>
+            <input type="text" class="form-control" id="kategori" name="kategori" value="{{ old('kategori') }}" required>
         </div>
 
         <!-- Foto Makanan -->
-        <div class="form-group mb-4">  <!-- Tambahkan margin-bottom -->
-            <label for="foto_makanan">Foto Makanan</label>
-            <input type="file" name="foto_makanan" class="form-control-file" id="foto_makanan" required>
+        <div class="mb-3">
+            <label for="foto_makanan" class="form-label">Foto Makanan</label>
+            <input type="file" class="form-control" id="foto_makanan" name="foto_makanan">
         </div>
 
-        <!-- Tombol Submit -->
-        <button type="submit" class="btn btn-primary">Simpan Menu</button>
+        <!-- Makanan or Minuman -->
+        <div class="mb-3">
+            <label for="fd" class="form-label">Jenis (Makanan/Minuman)</label>
+            <select class="form-control" id="fd" name="fd" required>
+                <option value="makanan">Makanan</option>
+                <option value="minuman">Minuman</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">Save Menu</button>
+        <br>
+        <br>
+        <br>
     </form>
 </div>
 @endsection

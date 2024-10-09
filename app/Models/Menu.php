@@ -12,7 +12,7 @@ class Menu extends Model
     protected $table = 'menus'; // Ganti 'menu' menjadi 'menus'
 
     protected $fillable = [
-        'restaurant_id',
+        // 'restaurant_id',
         'nama_makanan',
         'deskripsi',
         'harga',
@@ -21,8 +21,8 @@ class Menu extends Model
         'fd',
     ];
 
-    public function restaurant()
-    {
-        return $this->belongsTo(Restaurant::class, 'restaurant_id'); // Relasi ke model Restaurant
-    }
+    // public function restaurant()
+    // {
+    //     return $this->belongsTo(Restaurant::class, 'restaurant_id'); // Relasi ke model Restaurant
+    // }
 }

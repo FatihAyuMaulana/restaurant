@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('menus', function (Blueprint $table) {
             $table->id(); // Secara default ini membuat kolom 'id' sebagai Primary Key
-            $table->foreignId('restaurant_id')->constrained('restaurants')->onDelete('cascade'); // Foreign Key ke tabel restaurants
+            // $table->foreignId('restaurant_id')->constrained('restaurants')->onDelete('cascade'); // Foreign Key ke tabel restaurants
             $table->string('nama_makanan'); // Nama makanan
             $table->text('deskripsi')->nullable(); // Deskripsi makanan
             $table->decimal('harga', 8, 2); // Harga makanan
