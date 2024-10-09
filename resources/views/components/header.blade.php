@@ -6,10 +6,9 @@
     filter: brightness(0.5); /* Gambar menjadi lebih gelap saat di-hover */
 }
 
-
 /* Warna teks putih secara default untuk link di dalam navbar */
 .header-area .main-menu ul li a {
-    color: #fff; /* Warna teks putih */
+    color: #fff !important; /* Warna teks putih */
     transition: color 0.3s ease; /* Transisi smooth saat warna berubah */
 }
 
@@ -20,7 +19,7 @@
 
 /* Saat di-scroll, ubah teks menjadi warna hitam */
 .navbar-scrolled .main-menu ul li a {
-    color: #333; /* Warna teks hitam saat navbar di-scroll */
+    color: #333 !important; /* Warna teks hitam saat navbar di-scroll */
 }
 
 .navbar-scrolled .header-right-btn .border-btn {
@@ -32,6 +31,7 @@
     background-color: #333;
     color: #fff;
 }
+
 
     </style>
 <header>
@@ -58,7 +58,9 @@
                                         @if(Auth::guest())
                                             {{-- TANPA LOGIN --}}
                                             <li><a href="{{ url('/') }}" >Home</a></li>
-                                            <li><a href="{{ route('contact') }}">Contact</a></li>
+                                            {{-- <li><a href="{{ url('menu') }}">Menu</a></li>
+                                            <li><a href="{{ route('contact') }}">Contact</a></li> --}}
+                                            {{-- <li><a href="{{ route('gourmet_spot') }}">Gourmet Spot</a></li> --}}
                                         @else
                                             {{-- HARUS LOGIN --}}
                                             @if(Auth::user()->isAdmin()) {{-- Memeriksa apakah pengguna adalah admin --}}
@@ -73,7 +75,7 @@
                                                 <li><a href="{{ url('/') }}">Home</a></li>
                                                 <li><a href="{{ url('menu') }}">Menu</a></li>
                                                 <li><a href="{{ route('contact') }}">Contact</a></li>
-                                                <li><a href="{{ route('gourmet_spot') }}">Gourmet Spot</a></li>
+                                                {{-- <li><a href="{{ route('gourmet_spot') }}">Gourmet Spot</a></li> --}}
                                             @endif
                                     
                                             <form action="{{ route('logout') }}" method="POST" id="form-logout" style="display: none;">
