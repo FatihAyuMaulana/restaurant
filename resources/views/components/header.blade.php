@@ -1,3 +1,39 @@
+<style>
+    .img-bg {
+    filter: brightness(0.5); /* Mengurangi kecerahan gambar menjadi 50% */
+}
+.img-bg:hover {
+    filter: brightness(0.5); /* Gambar menjadi lebih gelap saat di-hover */
+}
+
+
+/* Warna teks putih secara default untuk link di dalam navbar */
+.header-area .main-menu ul li a {
+    color: #fff; /* Warna teks putih */
+    transition: color 0.3s ease; /* Transisi smooth saat warna berubah */
+}
+
+.header-area .header-right-btn .border-btn {
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Saat di-scroll, ubah teks menjadi warna hitam */
+.navbar-scrolled .main-menu ul li a {
+    color: #333; /* Warna teks hitam saat navbar di-scroll */
+}
+
+.navbar-scrolled .header-right-btn .border-btn {
+    color: #333; /* Warna tombol hitam saat di-scroll */
+    border-color: #333;
+}
+
+.navbar-scrolled .header-right-btn .border-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+    </style>
 <header>
     <!--? Header Start -->
     <div class="header-area header-transparent">
@@ -7,9 +43,12 @@
                     <!-- Logo -->
                     <div class="col-xl-2 col-lg-2 col-md-1">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            <a href="index.html">
+                                <img src="assets/img/logo/logo2.png" alt="" width="100" height="auto">
+                            </a>
                         </div>
                     </div>
+                    
                     <div class="col-xl-10 col-lg-10 col-md-10">
                         <div class="menu-main d-flex align-items-center justify-content-end">
                             <!-- Main-menu -->
@@ -18,7 +57,7 @@
                                     <ul>
                                         @if(Auth::guest())
                                             {{-- TANPA LOGIN --}}
-                                            <li><a href="{{ url('/') }}">Home</a></li>
+                                            <li><a href="{{ url('/') }}" >Home</a></li>
                                             <li><a href="{{ route('contact') }}">Contact</a></li>
                                         @else
                                             {{-- HARUS LOGIN --}}
@@ -29,7 +68,7 @@
                                                 <li><a href="{{ route('admin.settings') }}">Settings</a></li> --}}
                                                 <li><a href="">Admin Dashboard</a></li>
                                                 <li><a href="">Manage Users</a></li>
-                                                <li><a href="">Settings</a></li>
+                                                <li><a href="">Settings Menu</a></li>
                                             @else
                                                 <li><a href="{{ url('/') }}">Home</a></li>
                                                 <li><a href="{{ url('menu') }}">Menu</a></li>
@@ -68,3 +107,21 @@
     </div>
     <!-- Header End -->
 </header>
+<script>
+window.onscroll = function() {
+    var header = document.querySelector(".header-area");
+    var scrollPosition = window.scrollY;
+
+    console.log("Scroll position:", scrollPosition); // Menampilkan posisi scroll di konsol
+
+    // Jika halaman di-scroll lebih dari 50px, tambahkan class "navbar-scrolled"
+    if (scrollPosition > 50) {
+        header.classList.add("navbar-scrolled");
+        console.log("Navbar scrolled"); // Memastikan class ditambahkan
+    } else {
+        header.classList.remove("navbar-scrolled");
+        console.log("Navbar not scrolled"); // Memastikan class dihapus
+    }
+};
+
+</script>
