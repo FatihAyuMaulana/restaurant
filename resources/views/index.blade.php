@@ -9,23 +9,49 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="">
+                    <img src="assets/img/logo/logo2.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 <main>
     <!--? slider Area Start-->
-    <div class="single-slider slider-height d-flex align-items-center">
+    {{-- <div class="single-slider slider-height d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-xl-9 col-lg-9 col-md-9">
+                    <div class="hero-slider owl-carousel">
+                        <div class="hs-item set-bg" data-setbg="assets/img/hero/logo.jpg"></div>
+                        <div class="hs-item set-bg" data-setbg="assets/img/hero/logo1.jpg"></div>
+                    </div>
+                    <div class="dark-layer-hero"></div>
                     <div class="hero__caption">
                         <span data-animation="fadeInLeft" data-delay=".2s">Selamat Datang di Restaurant BIM</span>
                         <h1 data-animation="fadeInLeft" data-delay=".4s">Kami percaya makanan enak menawarkan senyuman yang menawan</h1>
                         <p data-animation="fadeInLeft" data-delay=".6s">Jelajahi Dunia Restaurant, Semua yang Anda Butuhkan Ada di Sini.</p>
                         <!-- Hero-btn -->
                         <div class="hero__btn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+
+    <!-- Single Slider -->
+    <div class="single-slider slider-height d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-lg-9 col-md-9">
+                    <img src="{{ asset('assets/img/hero/logo1.jpg')}}" alt="" class="img-bg">
+                    <div class="dark-layer-hero"></div>
+                    <div class="hero__caption">
+                        <span data-animation="fadeInLeft" data-delay=".2s">Discover Your Teste</span>
+                        <h1 data-animation="fadeInLeft" data-delay=".4s">We belive good food offer great smile</h1>
+                        <p data-animation="fadeInLeft" data-delay=".6s">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat is aute irure.</p>
+                        <!-- Hero-btn -->
+                        <div class="hero__btn">
+                            <a href="industries.html" class="btn hero-btn"  data-animation="fadeInLeft" data-delay=".8s">Resurvation</a>
                         </div>
                     </div>
                 </div>
@@ -43,6 +69,8 @@
     </div>
     
     <style>
+
+        
     /* Modal styling */
     .modal {
       display: none; 
@@ -85,6 +113,53 @@
       font-size: 18px;
       color: #333;
     }
+
+    /* .single-slider {
+        margin-top: 200px;
+    } */
+    .single-slider .img-bg {
+        position: relative;
+        width: 175%;
+        height: 700px;
+        right: 175px;
+        /* width: 1400px;
+        height: 700px;
+        right: 175px; */
+    }
+    .single-slider {
+    position: relative;  /* Pastikan elemen induk memiliki posisi relative */
+    width: 100%;         /* Sesuaikan dengan lebar penuh */
+    height: 700px;       /* Pastikan memiliki tinggi yang sesuai */
+}
+
+    .single-slider .hero__caption {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        text-align: center;
+        color: #ffffff;
+        z-index: 3;
+    }
+    .single-slider .hero__caption h1 {
+        color: #ffffff;
+    }
+    .single-slider .hero__caption p {
+        color: #ffffff;
+    }
+    .single-slider .dark-layer-hero {
+    position: fixed;  /* Ganti dengan fixed agar menutupi seluruh layar */
+    top: 0;
+    left: 0;
+    right: 0;
+       /* Tambahkan bottom: 0 untuk menutupi seluruh tinggi viewport */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+
     </style>
     
     <script>
