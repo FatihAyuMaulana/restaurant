@@ -141,22 +141,22 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="gallery-box">
                                 <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/spaicy shrimp.jpg')}}');"></div>
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/Josh Emetts Bouillabaisse.jpg')}}');"></div>
                                     <div class="g-caption">
-                                        <span>Rp. 135.000</span>
-                                        <h4>Spaicy Shrimp</h4>
-                                        <p>Udang dengan Sentuhan Pedas yang Meledak di Mulut.</p>
+                                        <span>Rp. 125.000</span>
+                                        <h4>Josh Emett's Bouillabaisse</h4>
+                                        <p>Hidangan Laut yang Menggugah Selera dengan Sentuhan Khas.</p>
                                         <a href="#" class="btn order-btn">Order Now</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="gallery-box">
                                 <div class="single-gallery">
-                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/Josh Emetts Bouillabaisse.jpg')}}');"></div>
+                                    <div class="gallery-img big-img" style="background-image: url('{{ asset('assets/img/gallery/spaicy shrimp.jpg')}}');"></div>
                                     <div class="g-caption">
-                                        <span>Rp. 125.000</span>
-                                        <h4>Josh Emett's Bouillabaisse</h4>
-                                        <p>Hidangan Laut yang Menggugah Selera dengan Sentuhan Khas.</p>
+                                        <span>Rp. 135.000</span>
+                                        <h4>Spaicy Shrimp</h4>
+                                        <p>Udang dengan Sentuhan Pedas yang Meledak di Mulut.</p>
                                         <a href="#" class="btn order-btn">Order Now</a>
                                     </div>
                                 </div>
