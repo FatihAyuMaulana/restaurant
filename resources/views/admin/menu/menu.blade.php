@@ -18,7 +18,7 @@
                     </div>
                 </div>
 
-                <a href="{{ route('admin.menu.create') }}" class="btn btn-custom mb-3">Add Menu</a>
+                <a href="{{ route('menu.create') }}" class="btn btn-custom mb-3">Add Menu</a>
 
                 <div class="row justify-content-center">
                     <div class="properties__button">
@@ -52,7 +52,6 @@
                                         <span>Rp. 500.000 </span>
                                         <h4>Beef Premium BIM</h4>
                                         <p>Sensasi Daging Berkualitas dengan Rasa yang Tak Tertandingi.</p>
-                                        <a href="#" class="btn order-btn">Order Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +64,6 @@
                                         <span>Rp 65.000</span>
                                         <h4>Nasi Liwet Nusantara</h4>
                                         <p>Perpaduan Rasa Klasik dengan Sajian Tradisional.</p>
-                                        <a href="#" class="btn order-btn">Order Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +78,6 @@
                                                 <span>Rp. 35.000</span>
                                                 <h4>Ocean Blue Hawaii</h4>
                                                 <p>Kesegaran Laut dalam Setiap Tegukan.</p>
-                                                <a href="#" class="btn order-btn">Order Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -93,7 +90,6 @@
                                                 <span>Rp. 85.000 </span>
                                                 <h4>Matcha Sensation</h4>
                                                 <p>Dessert Matcha dengan Tekstur Halus dan Rasa Otentik.</p>
-                                                <a href="#" class="btn order-btn">Order Now</a>
                                             </div>
                                         </div>
                                     </div>

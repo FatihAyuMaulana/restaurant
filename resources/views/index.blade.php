@@ -50,9 +50,6 @@
                         <h1 data-animation="fadeInLeft" data-delay=".4s">We belive good food offer great smile</h1>
                         <p data-animation="fadeInLeft" data-delay=".6s">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat is aute irure.</p>
                         <!-- Hero-btn -->
-                        <div class="hero__btn">
-                            <a href="industries.html" class="btn hero-btn"  data-animation="fadeInLeft" data-delay=".8s">Resurvation</a>
-                        </div>
                     </div>
                 </div>
             </div>

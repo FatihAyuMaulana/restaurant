@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Menu;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -38,6 +39,11 @@ class MenuController extends Controller
         return view('menu', compact('menus'));
     }
 
+    public function adminMenu() 
+    {
+        return view('admin.menu.menu');
+    }
+
     public function minuman()
     {
         $drinks = [
@@ -64,30 +70,32 @@ class MenuController extends Controller
 
     public function create()
     {
-        return view('menus.create');
+        $restaurants = Restaurant::all();
+        return view('admin.menu.create', compact('restaurants'));
     }
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'restaurant_id' => 'required|exists:restaurants,id',
             'nama_makanan' => 'required|string|max:255',
+            'harga' => 'required|numeric|min:0',
             'deskripsi' => 'nullable|string',
-            'harga' => 'required|numeric',
             'kategori' => 'required|string|max:255',
+            'fd' => 'required|in:makanan,minuman',
             'foto_makanan' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-
-        // Menyimpan foto makanan jika ada
-        $path = null;
+    
         if ($request->hasFile('foto_makanan')) {
-            $path = $request->file('foto_makanan')->store('images', 'public');
+            $filePath = $request->file('foto_makanan')->store('menu_photos', 'public');
+            $validated['foto_makanan'] = $filePath;
         }
-
-        Menu::create(array_merge($request->all(), ['foto_makanan' => $path]));
-
-        return redirect()->route('menus.index')->with('success', 'Menu created successfully.');
+    
+        Menu::create($validated);
+    
+        return redirect()->route('menu.index')->with('success', 'Menu added successfully');
     }
+    
 
     public function edit(Menu $menu)
     {

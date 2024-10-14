@@ -12,14 +12,14 @@ class Contacts extends Model
     protected $table = 'contacts'; // Ganti 'menu' menjadi 'menus'
 
     protected $fillable = [
-        'restaurant_id',
+        // 'restaurant_id',
         'username',
         'email',
         'isi_pesan',
     ];
 
-    public function restaurant()
-    {
-        return $this->belongsTo(Restaurant::class, 'restaurant_id'); // Relasi ke model Restaurant
-    }
+    // public function restaurant()
+    // {
+    //     return $this->belongsTo(Restaurant::class, 'restaurant_id'); // Relasi ke model Restaurant
+    // }
 }

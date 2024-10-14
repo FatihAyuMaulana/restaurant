@@ -15,7 +15,7 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id(); // ID primary key
-            $table->foreignId('restaurant_id')->constrained('restaurants')->onDelete('cascade'); // Foreign Key ke tabel restaurants
+            // $table->foreignId('restaurant_id')->constrained('restaurants')->onDelete('cascade'); // Foreign Key ke tabel restaurants
             $table->string('username'); // Nama pengguna
             $table->string('email'); // Email pengguna
             $table->text('isi_pesan'); // Pesan kontak
