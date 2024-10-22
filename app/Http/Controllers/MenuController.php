@@ -137,4 +137,10 @@ class MenuController extends Controller
         $menu->delete();
         return redirect()->route('menus.index')->with('success', 'Menu deleted successfully.');
     }
+
+
+    public function adminDashboard()
+    {
+        return view('admin.dashboard');
+    }
 }
