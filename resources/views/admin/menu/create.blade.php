@@ -68,7 +68,8 @@
             </select>
         </div>
 
-        <button type="submit" class="btn btn-success">Save Menu</button>
+        <button type="submit" class="btn btn-success">Simpan Menu</button>
+        <a href="{{ url()->previous() }}" class="btn btn-secondary">Kembali</a>
         <br>
         <br>
         <br>
