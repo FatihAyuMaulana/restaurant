@@ -10,38 +10,19 @@ class MenuController extends Controller
 {
     public function index()
     {
-        $menus = [
-            [
-                'name' => 'Steak',
-                'description' => 'Daging sapi panggang dengan kentang dan sayuran.',
-                'price' => 'Rp 130.000',
-                'category' => 'Main Course',
-                'image' => 'steak.jpg',
-            ],
-            [
-                'name' => 'Katsu',
-                'description' => 'Ayam goreng krispi dengan nasi dan saus katsu.',
-                'price' => 'Rp 35.000',
-                'category' => 'Main Course',
-                'image' => 'katsu.jpg',
-            ],
-            [
-                'name' => 'Spagetti Carbonara',
-                'description' => 'Spagetti carbonara yang rasanya sangat creame.',
-                'price' => 'Rp 45.000',
-                'category' => 'Main Course',
-                'image' => 'spagetti.jpg',
-            ],
-            // Tambahkan menu lainnya
-        ];
+        $foods = Menu::where('fd', 'makanan')->get();
+        $drinks = Menu::where('fd', 'minuman')->get();
 
         // Mengirimkan menu makanan dan minuman ke view
-        return view('menu', compact('menus'));
+        return view('menu', compact('foods', 'drinks'));
     }
 
-    public function adminMenu() 
+    public function adminMenu()
     {
-        return view('admin.menu.menu');
+        $foods = Menu::where('fd', 'makanan')->get();
+        $drinks = Menu::where('fd', 'minuman')->get();
+
+        return view('admin.menu.menu', compact('foods', 'drinks'));
     }
 
     public function minuman()
@@ -77,7 +58,7 @@ class MenuController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'restaurant_id' => 'required|exists:restaurants,id',
+            // 'restaurant_id' => 'required|exists:restaurants,id',
             'nama_makanan' => 'required|string|max:255',
             'harga' => 'required|numeric|min:0',
             'deskripsi' => 'nullable|string',
@@ -85,17 +66,17 @@ class MenuController extends Controller
             'fd' => 'required|in:makanan,minuman',
             'foto_makanan' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-    
+
         if ($request->hasFile('foto_makanan')) {
             $filePath = $request->file('foto_makanan')->store('menu_photos', 'public');
             $validated['foto_makanan'] = $filePath;
         }
-    
+
         Menu::create($validated);
-    
+
         return redirect()->route('menu.index')->with('success', 'Menu added successfully');
     }
-    
+
 
     public function edit(Menu $menu)
     {

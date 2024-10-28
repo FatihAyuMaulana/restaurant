@@ -15,3 +15,7 @@ require __DIR__.'/../vendor/autoload.php';
 // Bootstrap Laravel and handle the request...
 (require_once __DIR__.'/../bootstrap/app.php')
     ->handleRequest(Request::capture());
+
+    // comment out the above line and uncomment the below line to use the old way of handling the request
+    // git config user.email "your-email@example.com"
+    // git config user.name "Your Name"

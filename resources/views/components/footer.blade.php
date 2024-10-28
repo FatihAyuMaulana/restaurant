@@ -8,7 +8,7 @@
                         <div class="single-footer-caption mb-50">
                             <!-- logo -->
                             <div class="footer-logo">
-                                <a href="index.html"><img src="{{ asset('assets/img/logo/logo2-footer.png')}}" alt=""></a>
+                                <a href="/"><img src="{{ asset('assets/img/logo/logo2-footer.png')}}" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -47,12 +47,18 @@
                             </div>
                             <div class="instagram-gellay">
                                 <ul class="insta-feed">
-                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram1.png')}}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram2.png')}}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram3.png')}}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram4.png')}}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram5.png')}}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram6.png')}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram1.png')}}"
+                                                alt=""></a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram2.png')}}"
+                                                alt=""></a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram3.png')}}"
+                                                alt=""></a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram4.png')}}"
+                                                alt=""></a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram5.png')}}"
+                                                alt=""></a></li>
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram6.png')}}"
+                                                alt=""></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -63,9 +69,14 @@
                 <div class="row d-flex justify-content-between align-items-center">
                     <div class="col-xl-9 col-lg-8">
                         <div class="footer-copy-right">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> Restaurant BIM <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Alfa, Fatih, Puput, Sabrina, Zahra</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>
+                                    document.write(new Date().getFullYear());
+                                </script> Restaurant BIM <i class="fa fa-heart" aria-hidden="true"></i> by <a
+                                    href="https://colorlib.com" target="_blank">Alfa, Fatih, Puput, Sabrina, Zahra</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4">

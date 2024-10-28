@@ -13,10 +13,10 @@ class RemoveRestaurantIdFromMenusTable extends Migration
      */
     public function up()
     {
-        Schema::table('menus', function (Blueprint $table) {
-            $table->dropForeign(['restaurant_id']); // Drop foreign key constraint
-            $table->dropColumn('restaurant_id'); // Drop the column
-        });
+        // Schema::table('menus', function (Blueprint $table) {
+        //     $table->dropForeign(['restaurant_id']); // Drop foreign key constraint
+        //     $table->dropColumn('restaurant_id'); // Drop the column
+        // });
     }
 
     /**
@@ -26,8 +26,8 @@ class RemoveRestaurantIdFromMenusTable extends Migration
      */
     public function down()
     {
-        Schema::table('menus', function (Blueprint $table) {
-            $table->foreignId('restaurant_id')->constrained('restaurants')->onDelete('cascade'); // Add the column back with the foreign key
-        });
+        // Schema::table('menus', function (Blueprint $table) {
+        //     $table->foreignId('restaurant_id')->constrained('restaurants')->onDelete('cascade'); // Add the column back with the foreign key
+        // });
     }
 }
