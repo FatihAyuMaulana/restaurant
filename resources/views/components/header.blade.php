@@ -100,7 +100,7 @@
                             <div class="header-right-btn f-right d-none d-lg-block ml-20">
                                 @if(Auth::check())
                                 <a href="#" onclick="$('#form-logout').submit()"
-                                    class="border-btn header-btn">Logout</a>
+                                    class="border-btn header-btn btn-secondary">Logout</a>
                                 <form id="form-logout" action="{{ route('logout') }}" method="POST"
                                     style="display: none;">
                                     @csrf
