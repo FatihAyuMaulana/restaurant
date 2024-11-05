@@ -32,3 +32,10 @@ Route::get('/cart/receipt/{id}', [CartController::class, 'showReceipt'])->name('
 Route::get('/gourmet-spot', [RestaurantController::class, 'gourmetSpot'])->name('gourmet_spot');
 
 Route::get('/transaction', [App\Http\Controllers\TransactionController::class, 'index'])->name('transactions.report');
+
+Route::get('/user', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
+Route::get('/user/create', [App\Http\Controllers\UserController::class, 'create'])->name('user.create');
+Route::post('/user', [App\Http\Controllers\UserController::class, 'store'])->name('user.store');
+Route::get('/user/{id}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('user.edit');
+Route::put('/user/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('user.update');
+Route::delete('/user/{id}', [App\Http\Controllers\UserController::class, 'delete'])->name('user.delete');

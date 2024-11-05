@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -9,34 +10,35 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico') }}">
 
-	<!-- CSS here -->
-	<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css')}}">
-	<link rel="stylesheet" href="{{ asset('assets/css/slicknav.css')}}">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slicknav.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/gijgo.css')}}">
-	<link rel="stylesheet" href="{{ asset('assets/css/animate.min.css')}}">
-	<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css')}}">
-	<link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css')}}">
-	<link rel="stylesheet" href="{{ asset('assets/css/themify-icons.css')}}">
-	<link rel="stylesheet" href="{{ asset('assets/css/slick.cs')}}s">
-	<link rel="stylesheet" href="{{ asset('assets/css/nice-select.css')}}">
-	<link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.cs')}}s">
+    <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
 
     @stack('styles')
 </head>
+
 <body>
 
     <!-- Preloader Start -->
     <div class="app">
         <x-header />
         <div id="main-content">
-             @yield('content')
-    
+            @yield('content')
+
             <x-footer />
         </div>
     </div>
-   
+
     <!-- JS here -->
     @stack('scripts')
     <script src="{{ asset('assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
@@ -60,18 +62,19 @@
     <!-- Nice-select, sticky -->
     <script src="{{ asset('assets/js/jquery.nice-select.min.js')}}"></script>
     <script src="{{ asset('assets/js/jquery.sticky.js')}}"></script>
-    
+
     <!-- contact js -->
     <script src="{{ asset('assets/js/contact.js')}}"></script>
     <script src="{{ asset('assets/js/jquery.form.js')}}"></script>
     <script src="{{ asset('assets/js/jquery.validate.min.js')}}"></script>
     <script src="{{ asset('assets/js/mail-script.js')}}"></script>
     <script src="{{ asset('assets/js/jquery.ajaxchimp.min.js')}}"></script>
-    
-    <!-- Jquery Plugins, main Jquery -->	
+
+    <!-- Jquery Plugins, main Jquery -->
     <script src="{{ asset('assets/js/plugins.js')}}"></script>
     <script src="{{ asset('assets/js/main.js')}}"></script>
-    
 
-   </body>
+
+</body>
+
 </html>
