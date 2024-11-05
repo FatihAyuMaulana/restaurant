@@ -12,6 +12,10 @@
             <div class="card">
                 <div class="card-header">{{ __('Manage User') }}</div>
 
+                <div class="text-left mb-2 mt-2 ml-2">
+                    <a href="{{ route('user.create') }}" class="btn btn-secondary">Add</a>
+                </div>
+
                 <div class="card-body">
                     <table class="table">
                         <thead>
