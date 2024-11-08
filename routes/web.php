@@ -13,11 +13,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
 Route::get('menu', [App\Http\Controllers\MenuController::class, 'index'])->name('menu');
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/menu', [App\Http\Controllers\MenuController::class, 'adminMenu'])->name('admin.menu.menu');
     Route::get('/menu/create', [App\Http\Controllers\MenuController::class, 'create'])->name('admin.menu.create');
+    Route::post('/menu', [App\Http\Controllers\MenuController::class, 'store'])->name('admin.menu.store');
 });
 
 

@@ -20,7 +20,7 @@
     @endif
 
     <!-- Menu creation form -->
-    <form action="{{ route('menu.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ url('/admin/menu') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <!-- Restaurant ID -->

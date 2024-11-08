@@ -52,8 +52,8 @@
         .receipt .back-btn {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
+            background-color: #bcc7dd;
+            color: rgb(253, 250, 250);
             text-decoration: none;
             border-radius: 5px;
             margin-top: 20px;
@@ -74,6 +74,9 @@
         </div>
 
         <p class="total">Total: Rp. {{ number_format($transaction->total_harga, 0, ',', '.') }}</p>
+
+        <!-- Button updated to redirect to the home page -->
+        <a href="{{ route('home') }}" class="back-btn">Kembali ke Home</a>
     </div>
 </body>
 

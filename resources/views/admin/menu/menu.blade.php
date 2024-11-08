@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <a href="{{ route('menu.create') }}" class="btn btn-secondary mb-3">Add Menu</a>
+            <a href="{{ url('admin/menu/create') }}" class="btn btn-secondary mb-3">Add Menu</a>
 
             <div class="row justify-content-center">
                 <div class="properties__button">

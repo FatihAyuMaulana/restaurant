@@ -73,16 +73,16 @@
                                         {{-- <li><a href="{{ route('admin.dashboard') }}">Admin Dashboard</a></li>
                                         <li><a href="{{ route('admin.users') }}">Manage Users</a></li>
                                         <li><a href="{{ route('admin.settings') }}">Settings</a></li> --}}
-                                        <li><a href="">Admin Dashboard</a></li>
+                                        <li><a href="/">Admin Dashboard</a></li>
                                         <li><a href="/user">Manage Users</a></li>
-                                        <li><a href="/menu">Menu</a></li>
-                                        <li><a href="{{ route('transactions.report') }}">Transaction</a></li>
-                                        <li><a href="">Settings Menu</a></li>
+                                        <li><a href="/admin/menu">Menu</a></li>
+                                        <li><a href="{{ url("/transaction") }}">Transaction</a></li>
+                                        {{-- <li><a href="">Settings Menu</a></li> --}}
                                         @else
                                         <li><a href="{{ url('/') }}">Home</a></li>
                                         <li><a href="{{ url('menu') }}">Menu</a></li>
                                         {{-- cart --}}
-                                        <li> <a href="{{ route('cart.view') }}">Cart</a>
+                                        <li> <a href="{{ url("/cart") }}">Cart</a>
                                         </li>
                                         <li><a href="{{ route('contact') }}">Contact</a></li>
                                         {{-- <li><a href="{{ route('gourmet_spot') }}">Gourmet Spot</a></li> --}}

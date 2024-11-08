@@ -5,7 +5,7 @@
     <h2>Monthly Transactions</h2>
 
     <!-- Form Filter Bulan dan Tahun -->
-    <form action="{{ route('transactions.report') }}" method="GET" class="mb-3">
+    <form action="{{ url("/transaction") }}" method="GET" class="mb-3">
         <div class="row">
             <div class="">
                 <select name="month" id="month" class="form-control">
@@ -73,6 +73,6 @@
     </table>
     @endif
 
-    <a href="{{ route('menu.index') }}" class="btn btn-primary mt-3 mb-3">Back to Menu</a>
+    <a href="{{ url("/admin/menu") }}" class="btn btn-primary mt-3 mb-3">Back to Menu</a>
 </div>
 @endsection
