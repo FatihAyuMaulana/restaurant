@@ -14,6 +14,8 @@
             height: 100vh;
             margin: 0;
             background-color: #f4f4f4;
+            flex-direction: column;
+            position: relative;
         }
 
         .receipt {
@@ -49,14 +51,23 @@
             margin-top: 10px;
         }
 
-        .receipt .back-btn {
+        .back-btn {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
+            background-color: #525358;
+            color: rgb(253, 250, 250);
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 20px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        /* Hide the back button when printing */
+        @media print {
+            .back-btn {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -75,6 +86,9 @@
 
         <p class="total">Total: Rp. {{ number_format($transaction->total_harga, 0, ',', '.') }}</p>
     </div>
+
+    <!-- Button positioned in the bottom-left corner of the screen -->
+    <a href="{{ route('home') }}" class="back-btn">Kembali</a>
 </body>
 
 </html>

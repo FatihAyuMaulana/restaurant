@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Menu;
@@ -8,15 +9,17 @@ use Illuminate\Support\Facades\Storage;
 
 class MenuController extends Controller
 {
+    // Display the menu items for users
     public function index()
     {
         $foods = Menu::where('fd', 'makanan')->get();
         $drinks = Menu::where('fd', 'minuman')->get();
 
-        // Mengirimkan menu makanan dan minuman ke view
+        // Pass menu items to the view
         return view('menu', compact('foods', 'drinks'));
     }
 
+    // Display the menu items for admin
     public function adminMenu()
     {
         $foods = Menu::where('fd', 'makanan')->get();
@@ -25,6 +28,7 @@ class MenuController extends Controller
         return view('admin.menu.menu', compact('foods', 'drinks'));
     }
 
+    // View for drink menu items
     public function minuman()
     {
         $drinks = [
@@ -42,23 +46,24 @@ class MenuController extends Controller
                 'category' => 'Drink',
                 'image' => 'jus_jeruk.jpg',
             ],
-            // Tambahkan minuman lainnya
+            // Add other drinks here
         ];
 
-        // Mengirimkan data minuman ke view admin.menu.minuman
+        // Send drink data to the view
         return view('minuman', compact('drinks'));
     }
 
+    // Show form to create a new menu item
     public function create()
     {
         $restaurants = Restaurant::all();
         return view('admin.menu.create', compact('restaurants'));
     }
 
+    // Store a new menu item in the database
     public function store(Request $request)
     {
         $validated = $request->validate([
-            // 'restaurant_id' => 'required|exists:restaurants,id',
             'nama_makanan' => 'required|string|max:255',
             'harga' => 'required|numeric|min:0',
             'deskripsi' => 'nullable|string',
@@ -67,26 +72,28 @@ class MenuController extends Controller
             'foto_makanan' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
+        // Save image if uploaded
         if ($request->hasFile('foto_makanan')) {
             $filePath = $request->file('foto_makanan')->store('menu_photos', 'public');
             $validated['foto_makanan'] = $filePath;
         }
 
+        // Create new menu item
         Menu::create($validated);
 
         return redirect()->route('menu.index')->with('success', 'Menu added successfully');
     }
 
-
+    // Show form to edit a menu item
     public function edit(Menu $menu)
     {
-        return view('menus.edit', compact('menu'));
+        return view('admin.menu.edit', compact('menu'));
     }
 
+    // Update a menu item in the database
     public function update(Request $request, Menu $menu)
     {
         $request->validate([
-            'restaurant_id' => 'required|exists:restaurants,id',
             'nama_makanan' => 'required|string|max:255',
             'deskripsi' => 'nullable|string',
             'harga' => 'required|numeric',
@@ -94,28 +101,33 @@ class MenuController extends Controller
             'foto_makanan' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        // Menyimpan foto makanan jika ada
+        // Save new image if uploaded
         $path = $menu->foto_makanan;
         if ($request->hasFile('foto_makanan')) {
-            // Hapus foto lama jika ada
+            // Delete old image if exists
             if ($path) {
                 Storage::disk('public')->delete($path);
             }
-            $path = $request->file('foto_makanan')->store('images', 'public');
+            $path = $request->file('foto_makanan')->store('menu_photos', 'public');
         }
 
+        // Update menu item
         $menu->update(array_merge($request->all(), ['foto_makanan' => $path]));
 
-        return redirect()->route('menus.index')->with('success', 'Menu updated successfully.');
+        return redirect()->route('menu.index')->with('success', 'Menu updated successfully');
     }
 
+    // Delete a menu item from the database
     public function destroy(Menu $menu)
     {
-        // Hapus foto jika ada
+        // Delete image if it exists
         if ($menu->foto_makanan) {
             Storage::disk('public')->delete($menu->foto_makanan);
         }
+
+        // Delete the menu item
         $menu->delete();
-        return redirect()->route('menus.index')->with('success', 'Menu deleted successfully.');
+
+        return redirect()->route('menu.index')->with('success', 'Menu deleted successfully');
     }
 }

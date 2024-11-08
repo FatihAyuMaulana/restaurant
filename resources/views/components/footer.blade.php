@@ -1,20 +1,27 @@
 <footer>
     <!--? Footer Start-->
-    <div class="footer-area section-bg" data-background="{{ asset('assets/img/gallery/section_bg02.png')}}">
+    <div class="footer-area section-bg" data-background="{{ asset('assets/img/gallery/section_bg02.png') }}">
         <div class="container">
             <div class="footer-top footer-padding">
                 <div class="row d-flex justify-content-between">
                     <div class="col-xl-4 col-lg-4 col-md-5 col-sm-8">
                         <div class="single-footer-caption mb-50">
-                            <!-- logo -->
-                            <div class="footer-logo">
-                                <a href="/"><img src="{{ asset('assets/img/logo/logo2-footer.png')}}" alt=""></a>
+                            <!-- Logo -->
+                            <div class="footer-logo" style="text-align: right;">
+                                <a href="/">
+                                    <img src="{{ asset('assets/img/logo/logo2-footer.png') }}" alt="Logo"
+                                        style="max-width: 450px; margin-bottom: 20px; padding-right: 10px;">
+                                </a>
                             </div>
+
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-5 col-sm-6">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
+                                <br>
+                                <br>
+                                <br>
                                 <h4>Navigation</h4>
                                 <ul>
                                     <li><a href="#">Home</a></li>
@@ -29,6 +36,9 @@
                     <div class="col-xl-2 col-lg-2 col-md-5 col-sm-6">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
+                                <br>
+                                <br>
+                                <br>
                                 <h4>Useful Links</h4>
                                 <ul>
                                     <li><a href="#">Registration</a></li>
@@ -43,21 +53,24 @@
                     <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
+                                <br>
+                                <br>
+                                <br>
                                 <h4>Instagram Feed</h4>
                             </div>
                             <div class="instagram-gellay">
                                 <ul class="insta-feed">
-                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram1.png')}}"
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram1.png') }}"
                                                 alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram2.png')}}"
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram2.png') }}"
                                                 alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram3.png')}}"
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram3.png') }}"
                                                 alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram4.png')}}"
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram4.png') }}"
                                                 alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram5.png')}}"
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram5.png') }}"
                                                 alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram6.png')}}"
+                                    <li><a href="#"><img src="{{ asset('assets/img/gallery/instagram6.png') }}"
                                                 alt=""></a></li>
                                 </ul>
                             </div>
@@ -71,10 +84,11 @@
                         <div class="footer-copy-right">
                             <p>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>
+                                Copyright &copy;
+                                <script>
                                     document.write(new Date().getFullYear());
-                                </script> Restaurant BIM <i class="fa fa-heart" aria-hidden="true"></i> by <a
-                                    href="https://colorlib.com" target="_blank">Alfa, Fatih, Puput, Sabrina, Zahra</a>
+                                </script> Restaurant BIM <i class="fa fa-heart" aria-hidden="true"></i>
+                                by <a href="https://colorlib.com" target="_blank">Alfa, Fatih, Puput, Sabrina, Zahra</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
