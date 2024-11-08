@@ -74,7 +74,7 @@ class MenuController extends Controller
 
         Menu::create($validated);
 
-        return redirect()->route('menu.index')->with('success', 'Menu added successfully');
+        return redirect()->route('admin.menu.menu')->with('success', 'Menu added successfully');
     }
 
 

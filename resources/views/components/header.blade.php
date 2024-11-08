@@ -1,4 +1,4 @@
-<style>
+    <style>
     .img-bg {
         filter: brightness(0.5);
         /* Mengurangi kecerahan gambar menjadi 50% */
@@ -74,8 +74,8 @@
                                         <li><a href="{{ route('admin.users') }}">Manage Users</a></li>
                                         <li><a href="{{ route('admin.settings') }}">Settings</a></li> --}}
                                         <li><a href="">Admin Dashboard</a></li>
-                                        <li><a href="{{ route('user.index') }}">Manage Users</a></li>
-                                        <li><a href="{{ route('admin.menu.menu') }}">Menu</a></li>
+                                        <li><a href="/user">Manage Users</a></li>
+                                        <li><a href="/menu">Menu</a></li>
                                         <li><a href="{{ route('transactions.report') }}">Transaction</a></li>
                                         <li><a href="">Settings Menu</a></li>
                                         @else
