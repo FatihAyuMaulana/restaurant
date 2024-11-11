@@ -44,8 +44,10 @@
                             <td>{{ number_format($details['price'], 0, ',', '.') }}</td>
                             <td>{{ number_format($details['price'] * $details['quantity'], 0, ',', '.') }}</td>
                             <td>
+
                                 <!-- Tombol Delete untuk menghapus item dari keranjang -->
                                 <a href="{{ route('cart.remove', $id) }}" class="btn btn-danger">Delete</a>
+
                             </td>
                         </tr>
                     @endforeach
@@ -54,6 +56,7 @@
 
             <!-- Tombol Checkout -->
             <div class="text-center mb-2">
+
                 <a href="{{ route('cart.checkout') }}" class="btn btn-primary">Checkout</a>
             </div>
         @else
