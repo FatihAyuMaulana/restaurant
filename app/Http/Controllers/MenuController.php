@@ -67,7 +67,7 @@ class MenuController extends Controller
             'nama_makanan' => 'required|string|max:255',
             'harga' => 'required|numeric|min:0',
             'deskripsi' => 'nullable|string',
-            // 'kategori' => 'required|string|max:255',
+            'kategori' => 'required|string|max:255',
             'fd' => 'required|in:makanan,minuman',
             'foto_makanan' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
@@ -97,7 +97,7 @@ class MenuController extends Controller
             'nama_makanan' => 'required|string|max:255',
             'deskripsi' => 'nullable|string',
             'harga' => 'required|numeric',
-            // 'kategori' => 'required|string|max:255',
+            'kategori' => 'required|string|max:255',
             'foto_makanan' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -129,11 +129,5 @@ class MenuController extends Controller
         $menu->delete();
 
         return redirect()->route('menu.index')->with('success', 'Menu deleted successfully');
-    }
-
-
-    public function adminDashboard()
-    {
-        return view('admin.dashboard');
-    }
+}
 }
