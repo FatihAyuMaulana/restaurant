@@ -13,6 +13,7 @@
                 <div class="card-header">{{ __('Manage User') }}</div>
 
                 <div class="text-left mb-2 mt-2 ml-2">
+                    <a href="{{ route('index') }}" class="btn btn-secondary">Back</a>
                     <a href="{{ route('user.create') }}" class="btn btn-secondary">Add</a>
                 </div>
 

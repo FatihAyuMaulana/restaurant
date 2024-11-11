@@ -33,6 +33,7 @@
 
     <!-- Tombol Checkout -->
     <div class="text-center mb-2">
+        <a href="{{ route('menu') }}" class="btn btn-secondary">Menu</a>
         <a href="{{ route('cart.checkout') }}" class="btn btn-primary">Checkout</a>
     </div>
 
