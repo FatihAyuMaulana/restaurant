@@ -72,13 +72,12 @@
                                                 {{-- Memeriksa apakah pengguna adalah admin --}}
                                                 {{-- NAVBAR UNTUK ADMIN --}}
                                                 {{-- <li><a href="{{ route('admin.dashboard') }}">Admin Dashboard</a></li>
-                                        <li><a href="{{ route('admin.users') }}">Manage Users</a></li>
-                                        <li><a href="{{ route('admin.settings') }}">Settings</a></li> --}}
+                                                <li><a href="{{ route('admin.users') }}">Manage Users</a></li>
+                                                <li><a href="{{ route('admin.settings') }}">Settings</a></li> --}}
                                                 <li><a href="">Admin Dashboard</a></li>
-                                                <li><a href="{{ route('user.index') }}">Manage Users</a></li>
+                                                <li><a href="">Manage Users</a></li>
                                                 <li><a href="{{ route('admin.menu.menu') }}">Menu</a></li>
-                                                <li><a href="{{ route('transactions.report') }}">Transaction</a></li>
-                                                {{-- <li><a href="">Settings Menu</a></li> --}}
+                                                <li><a href="">Settings Menu</a></li>
                                             @else
                                                 <li><a href="{{ url('/') }}">Home</a></li>
                                                 <li><a href="{{ url('menu') }}">Menu</a></li>
