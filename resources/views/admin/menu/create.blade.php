@@ -51,12 +51,6 @@
             <textarea class="form-control" id="deskripsi" name="deskripsi">{{ old('deskripsi') }}</textarea>
         </div>
 
-        <!-- Kategori -->
-        <div class="mb-3">
-            <label for="kategori" class="form-label">Kategori</label>
-            <input type="text" class="form-control" id="kategori" name="kategori" value="{{ old('kategori') }}" required>
-        </div>
-
         <!-- Foto Makanan -->
         <div class="mb-3">
             <label for="foto_makanan" class="form-label">Foto Makanan</label>
@@ -65,14 +59,17 @@
 
         <!-- Makanan or Minuman -->
         <div class="mb-3">
-            <label for="fd" class="form-label">Jenis (Makanan/Minuman)</label>
+            <label for="fd" class="form-label">Jenis Menu</label>
             <select class="form-control" id="fd" name="fd" required>
+                <option value="spesial">Spesial</option>
                 <option value="makanan">Makanan</option>
                 <option value="minuman">Minuman</option>
+                <option value="dessert">Dessert</option>
             </select>
         </div>
 
-        <button type="submit" class="btn btn-success">Save Menu</button>
+        <button type="submit" class="btn btn-success">Simpan Menu</button>
+        <a href="{{ url()->previous() }}" class="btn btn-secondary">Kembali</a>
         <br>
         <br>
         <br>

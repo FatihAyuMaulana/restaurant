@@ -15,9 +15,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('menu', [App\Http\Controllers\MenuController::class, 'index'])->name('menu');
 Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\MenuController::class, 'adminDashboard'])->name('admin.dashboard');
     Route::get('/menu', [App\Http\Controllers\MenuController::class, 'adminMenu'])->name('admin.menu.menu');
     Route::get('/menu/create', [App\Http\Controllers\MenuController::class, 'create'])->name('admin.menu.create');
     Route::post('/menu', [App\Http\Controllers\MenuController::class, 'store'])->name('admin.menu.store');
+
+    Route::get('/menu/create', [App\Http\Controllers\MenuController::class, 'create'])->name('admin.menu.create'); 
+
 });
 
 
@@ -31,6 +35,7 @@ Route::get('/cart/receipt/{id}', [CartController::class, 'showReceipt'])->name('
 
 Route::get('/gourmet-spot', [RestaurantController::class, 'gourmetSpot'])->name('gourmet_spot');
 
+
 Route::get('/transaction', [App\Http\Controllers\TransactionController::class, 'index'])->name('transactions.report');
 
 Route::get('/user', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
@@ -39,3 +44,4 @@ Route::post('/user', [App\Http\Controllers\UserController::class, 'store'])->nam
 Route::get('/user/{id}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('user.edit');
 Route::put('/user/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('user.update');
 Route::delete('/user/{id}', [App\Http\Controllers\UserController::class, 'delete'])->name('user.delete');
+
