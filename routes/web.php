@@ -16,11 +16,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('menu', App\Http\Controllers\MenuController::class);
 Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\MenuController::class, 'adminDashboard'])->name('admin.dashboard');
     Route::get('/menu', [App\Http\Controllers\MenuController::class, 'adminMenu'])->name('admin.menu.menu');
-    Route::get('/menu/{menu}/edit', [MenuController::class, 'edit'])->name('menu.edit');
-    Route::put('/menu/{menu}', [MenuController::class, 'update'])->name('menu.update');
-
-    Route::get('/menu/create', [App\Http\Controllers\MenuController::class, 'create'])->name('admin.menu.create');
+    Route::get('/menu/create', [App\Http\Controllers\MenuController::class, 'create'])->name('admin.menu.create');  
 });
 
 
@@ -34,6 +32,7 @@ Route::get('/cart/receipt/{id}', [CartController::class, 'showReceipt'])->name('
 Route::patch('cart/update/{id}', [CartController::class, 'updateCart'])->name('cart.update');
 
 Route::get('/gourmet-spot', [RestaurantController::class, 'gourmetSpot'])->name('gourmet_spot');
+
 
 Route::get('/transaction', [App\Http\Controllers\TransactionController::class, 'index'])->name('transactions.report');
 
