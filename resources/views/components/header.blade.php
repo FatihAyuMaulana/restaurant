@@ -60,47 +60,32 @@
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
                                     <ul>
-                                        @if(Auth::guest())
-                                        {{-- TANPA LOGIN --}}
-                                        <li><a href="{{ url('/') }}">Home</a></li>
-                                        {{-- <li><a href="{{ url('menu') }}">Menu</a></li>
+                                        @if (Auth::guest())
+                                            {{-- TANPA LOGIN --}}
+                                            <li><a href="{{ url('/') }}">Home</a></li>
+                                            {{-- <li><a href="{{ url('menu') }}">Menu</a></li>
                                         <li><a href="{{ route('contact') }}">Contact</a></li> --}}
-                                        {{-- <li><a href="{{ route('gourmet_spot') }}">Gourmet Spot</a></li> --}}
+                                            {{-- <li><a href="{{ route('gourmet_spot') }}">Gourmet Spot</a></li> --}}
                                         @else
-
-                                        {{-- HARUS LOGIN --}}
-                                        @if(Auth::user()->isAdmin()) {{-- Memeriksa apakah pengguna adalah admin --}}
-                                        {{-- NAVBAR UNTUK ADMIN --}}
-                                        {{-- <li><a href="{{ route('admin.dashboard') }}">Admin Dashboard</a></li>
-                                        <li><a href="{{ route('admin.users') }}">Manage Users</a></li>
-                                        <li><a href="{{ route('admin.settings') }}">Settings</a></li> --}}
-                                        <li><a href="/">Admin Dashboard</a></li>
-                                        <li><a href="/user">Manage Users</a></li>
-                                        <li><a href="/admin/menu">Menu</a></li>
-                                        <li><a href="{{ url("/transaction") }}">Transaction</a></li>
-                                        {{-- <li><a href="">Settings Menu</a></li> --}}
-                                        @else
-                                        <li><a href="{{ url('/') }}">Home</a></li>
-                                        <li><a href="{{ url('menu') }}">Menu</a></li>
-                                        {{-- cart --}}
-                                        <li> <a href="{{ url("/cart") }}">Cart</a>
-                                        </li>
-                                        <li><a href="{{ route('contact') }}">Contact</a></li>
-                                        {{-- <li><a href="{{ route('gourmet_spot') }}">Gourmet Spot</a></li> --}}
 
                                             {{-- HARUS LOGIN --}}
-                                            @if(Auth::user()->isAdmin()) {{-- Memeriksa apakah pengguna adalah admin --}}
+                                            @if (Auth::user()->isAdmin())
+                                                {{-- Memeriksa apakah pengguna adalah admin --}}
                                                 {{-- NAVBAR UNTUK ADMIN --}}
                                                 {{-- <li><a href="{{ route('admin.dashboard') }}">Admin Dashboard</a></li>
                                                 <li><a href="{{ route('admin.users') }}">Manage Users</a></li>
                                                 <li><a href="{{ route('admin.settings') }}">Settings</a></li> --}}
-                                                <li><a href="{{ route('admin.dashboard') }}">Admin Dashboard</a></li>
-                                                <li><a href="{{ url('admin.users') }}">Manage Users</a></li>
+                                                <li><a href="{{route('admin.dashboard')}}">Admin Dashboard</a></li>
+                                                <li><a href="{{ route('user.index') }}">Manage Users</a></li>
                                                 <li><a href="{{ route('admin.menu.menu') }}">Menu</a></li>
-                                                <li><a href="{{ url('admin.settings') }}">Settings Menu</a></li>
+                                                <li><a href="{{ url('/transaction') }}">Transaction</a></li>
+                                                <li><a href="{{ route('admin.contact.index') }}">Message Center</a></li>
                                             @else
                                                 <li><a href="{{ url('/') }}">Home</a></li>
                                                 <li><a href="{{ url('menu') }}">Menu</a></li>
+                                                {{-- cart --}}
+                                                <li> <a href="{{ route('cart.view') }}">Cart</a>
+                                                </li>
                                                 <li><a href="{{ route('contact') }}">Contact</a></li>
                                                 {{-- <li><a href="{{ route('gourmet_spot') }}">Gourmet Spot</a></li> --}}
                                             @endif
@@ -108,29 +93,22 @@
                                             <form action="{{ route('logout') }}" method="POST" id="form-logout" style="display: none;">
                                                 @csrf
                                             </form>
-
-                                        @endif
-
-                                        <form action="{{ route('logout') }}" method="POST" id="form-logout"
-                                            style="display: none;">
-                                            @csrf
-                                        </form>
                                         @endif
                                     </ul>
                                 </nav>
                             </div>
                             <!-- Header Right (login/register/logout) -->
                             <div class="header-right-btn f-right d-none d-lg-block ml-20">
-                                @if(Auth::check())
-                                <a href="#" onclick="$('#form-logout').submit()"
-                                    class="border-btn header-btn btn-secondary">Logout</a>
-                                <form id="form-logout" action="{{ route('logout') }}" method="POST"
-                                    style="display: none;">
-                                    @csrf
-                                </form>
+                                @if (Auth::check())
+                                    <a href="#" onclick="$('#form-logout').submit()"
+                                        class="border-btn header-btn btn-secondary">Logout</a>
+                                    <form id="form-logout" action="{{ route('logout') }}" method="POST"
+                                        style="display: none;">
+                                        @csrf
+                                    </form>
                                 @else
-                                <a href="{{ route('login') }}" class="border-btn header-btn">Login</a>
-                                <a href="{{ route('register') }}" class="border-btn header-btn">Register</a>
+                                    <a href="{{ route('login') }}" class="border-btn header-btn">Login</a>
+                                    <a href="{{ route('register') }}" class="border-btn header-btn">Register</a>
                                 @endif
                             </div>
                         </div>
@@ -147,19 +125,18 @@
 </header>
 <script>
     window.onscroll = function() {
-    var header = document.querySelector(".header-area");
-    var scrollPosition = window.scrollY;
+        var header = document.querySelector(".header-area");
+        var scrollPosition = window.scrollY;
 
-    console.log("Scroll position:", scrollPosition); // Menampilkan posisi scroll di konsol
+        console.log("Scroll position:", scrollPosition); // Menampilkan posisi scroll di konsol
 
-    // Jika halaman di-scroll lebih dari 50px, tambahkan class "navbar-scrolled"
-    if (scrollPosition > 50) {
-        header.classList.add("navbar-scrolled");
-        console.log("Navbar scrolled"); // Memastikan class ditambahkan
-    } else {
-        header.classList.remove("navbar-scrolled");
-        console.log("Navbar not scrolled"); // Memastikan class dihapus
-    }
-};
-
+        // Jika halaman di-scroll lebih dari 50px, tambahkan class "navbar-scrolled"
+        if (scrollPosition > 50) {
+            header.classList.add("navbar-scrolled");
+            console.log("Navbar scrolled"); // Memastikan class ditambahkan
+        } else {
+            header.classList.remove("navbar-scrolled");
+            console.log("Navbar not scrolled"); // Memastikan class dihapus
+        }
+    };
 </script>

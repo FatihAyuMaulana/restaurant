@@ -1,42 +1,133 @@
-<?php 
+<?php
+
 namespace App\Http\Controllers;
 
-use App\Models\Restaurant; // Assuming you have a Restaurant model
+use App\Models\Contacts;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+use App\Post;
 
 class ContactController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        $restaurants = Restaurant::all(); // Mengambil semua cabang restoran
-        return view('contact', compact('restaurants'));
+        // Mengambil semua data kontak, diurutkan berdasarkan nama secara ascending
+        $contacts = Contacts::orderBy('username', 'asc')->get();
+        
+        // Atau, jika Anda ingin mengurutkan berdasarkan ID secara ascending:
+        // $contacts = Contacts::orderBy('id', 'asc')->get();
+    
+        // Atau, jika Anda ingin mengurutkan berdasarkan tanggal secara ascending:
+        // $contacts = Contacts::orderBy('created_at', 'asc')->get();
+    
+        return view('admin.contact.index', compact('contacts'));
     }
+    
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
-        $restaurants = Restaurant::all(); // Mengambil semua cabang restoran
-        return view('contact.create', compact('restaurants')); // Render the create form
+        //
     }
 
-    public function store(Request $request)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+     public function store(Request $request)
+     {
+         $validateData = $request->validate([
+             'username' => 'required|string|max:255',
+             'email' => 'required|email|max:128',
+             'isi_pesan' => 'nullable|string|max:555',
+         ]);
+     
+         $contact = new contacts;
+         $contact->username = $validateData['username'];
+         $contact->email = $validateData['email'];
+         $contact->isi_pesan = $validateData['isi_pesan'];
+     
+        //  if (Auth::check()) {
+        //      $contact->user_id = Auth::id();
+        //  }
+     
+         if ($contact->save()) {
+             return redirect()->route('contact')->with('success', 'Pesan berhasil dikirim.');
+         } else {
+             return back()->with('error', 'Pesan gagal dikirim.');
+         }
+     }
+     
+
+
+    // public function store(Request $request)
+    // {
+    //     $request->validate(
+    //         [
+    //             'Nama' => 'required',
+    //             'Email' => 'required|max:128',
+    //             'Pesan' => 'nullable|max:555',
+    //         ], 
+    //     );
+    //     $contact = contact::create($request->all());
+    //     return redirect()->route('contact');
+    // }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
-        $request->validate([
-            'restaurant_id' => 'required|exists:restaurants,id',
-            'username' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'isi_pesan' => 'required|string',
-        ]);
-
-        // Here, you can save the message or send an email
-        // Example:
-        // Message::create($request->all());
-
-        return redirect()->route('contact.form')->with('success', 'Your message has been sent successfully!');
+        //
     }
 
-    public function submitContactForm(Request $request)
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
     {
-        // You may want to keep this method for handling submissions if it serves a different purpose
-        return $this->store($request);
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 }

@@ -1,94 +1,132 @@
 @extends('layouts.app')
 
+@push('styles')
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
+@endpush
+
 @section('content')
-<br> 
-<br>
-<br>
-<br>
-<br>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Contact Us') }}</div>
 
-                <div class="card-body">
+    <!-- Contact Section Begin -->
+    <section class="contact-section spad">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contact-text">
+                        <h2>Contact Info</h2>
+                        <p>Kami di Restaurant Berlian siap membantu Anda dengan segala kebutuhan dan pertanyaan. 
+                        Jangan ragu untuk menghubungi kami melalui informasi di bawah ini:</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="c-o">Address:</td>
+                                    <td>57 Corner Extension Apt. 36, Lake, US</td>
+                                </tr>
+                                <tr>
+                                    <td class="c-o">Phone:</td>
+                                    <td>(+62) 881-1821-410</td>
+                                </tr>
+                                <tr>
+                                    <td class="c-o">Email:</td>
+                                    <td>BerlianRestaurant@gmail.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-7 offset-lg-1">
+                    <form action="{{ route('contact.store') }}" method="POST" class="contact-form">
                         @csrf
-
-                        <div class="form-group row">
-                            <label for="restaurant_id" class="col-md-4 col-form-label text-md-right">{{ __('Restaurant Branch') }}</label>
-
-                            <div class="col-md-6">
-                                <select id="restaurant_id" name="restaurant_id" required>
-                                    <option value="" disabled selected>Pilih cabang restoran</option>
-                                    @foreach ($restaurants as $restaurant)
-                                        <option value="{{ $restaurant->id }}">{{ $restaurant->name }}</option>
-                                    @endforeach
-                                </select>
-
-                                @error('restaurant_id')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="item">Nama</label>
+                                <input type="text" id="username" name="username" class="form-control" value="{{ Auth::user() ? Auth::user()->firstname : '' }}">
+                            </div>
+        
+                            <div class="col-lg-6">
+                                <label for="noOfServings">Email</label>
+                                <input type="text" id="email" name="email" class="form-control" value="{{ Auth::user() ? Auth::user()->email : '' }}">
+                            </div>
+        
+                            <div class="col-lg-12">
+                                <label for="servingSize">Pesan</label>
+                                <input type="text-area" id="isi_pesan" name="isi_pesan" class="form-control">
                             </div>
                         </div>
+<br>
+<br>
+                        <button type="submit" class="btn">Submit Now</button>
 
-                        <div class="form-group row">
-                            <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
-
-                                @error('username')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="isi_pesan" class="col-md-4 col-form-label text-md-right">{{ __('Message') }}</label>
-
-                            <div class="col-md-6">
-                                <textarea id="isi_pesan" class="form-control @error('isi_pesan') is-invalid @enderror" name="isi_pesan" required>{{ old('isi_pesan') }}</textarea>
-
-                                @error('isi_pesan')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Message') }}
-                                </button>
-                            </div>
-                        </div>
                     </form>
                 </div>
             </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/place/Jasa+Snack+%26+Catering+-+Intan+Snack/@-7.3856822,109.3628782,17z/data=!3m1!4b1!4m6!3m5!1s0x2e655963f663e173:0xea07d8955a926292!8m2!3d-7.3856875!4d109.3654531!16s%2Fg%2F11v9jkjhjk?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"
+                    height="470" style="border:0;" allowfullscreen=""></iframe>
+            </div>
         </div>
-    </div>
-</div>
-<br>
-<br>
+    </section>
+    <!-- Contact Section End -->
+
+
+
+
+
+    {{-- <p style="padding-top: 100px"></p>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+
+
+                <form method="POST" action="{{ route('contact.store') }}">
+
+                    {{ csrf_field() }}
+
+                    <h1>Beri Kami Masukan</h1>
+                    <div class="form-group">
+
+                        <label for="item">Nama</label>
+
+                        <input type="text" id="Nama" name="Nama" class="form-control">
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="noOfServings">Email</label>
+
+                        <input type="text" id="Email" name="Email" class="form-control">
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="servingSize">Pesan</label>
+
+                        <input type="text-area" id="Pesan" name="Pesan" class="form-control">
+
+                    </div>
+
+
+
+
+
+                    <button type="submit" class="btn btn-primary">Kirim</button>
+
+
+
+
+                </form>
+
+
+
+            </div>
+        </div>
+    <p style="padding-bottom: 100px"></p> --}}
 @endsection

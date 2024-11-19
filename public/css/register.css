@@ -1,61 +1,111 @@
-/* styles.css */
-
+/* Resetting default styles */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Memastikan padding dan margin tidak mempengaruhi ukuran elemen */
+    box-sizing: border-box;
 }
 
+/* Body setup */
 body {
-    background-color: #f4f4f4; /* Warna latar belakang yang lebih lembut */
-    font-family: Arial, sans-serif; /* Mengatur font untuk seluruh halaman */
+    background-color: #f4f4f4; /* Light grey background */
+    font-family: 'Arial', sans-serif;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Memastikan body setidaknya setinggi viewport */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
 }
 
-.container {
-    flex: 1; /* Memungkinkan kontainer untuk mengisi ruang yang tersedia */
-    display: flex;
-    align-items: center; /* Menyelaraskan konten secara vertikal */
-    justify-content: center; /* Menyelaraskan konten secara horizontal */
-    padding: 20px; /* Memberikan padding di sekitar kontainer */
+/* Container for the form */
+.register-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff; /* White background for the card */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* left: 330px; */
 }
 
-.card {
-    background-color: #ffffff; /* Warna latar belakang card */
-    border-radius: 8px; /* Sudut membulat untuk card */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk card */
-    width: 100%; /* Memastikan card mengambil lebar penuh */
-    max-width: 500px; /* Membatasi lebar maksimum card */
-    margin-bottom: 20px; /* Memberikan jarak antara card dan footer */
-    padding: 20px; /* Padding di dalam card */
+/* Header section */
+.register-header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.card form {
-    display: flex;
-    flex-direction: column; /* Mengatur form agar elemen berada dalam kolom */
+.register-header h2 {
+    font-size: 1.8rem; /* Reduced font size */
+    color: #333;
 }
 
-.card input {
-    border: 1px solid #ced4da; /* Border untuk input */
-    border-radius: 5px; /* Sudut membulat untuk input */
-    padding: 10px; /* Padding di dalam input */
-    margin-bottom: 15px; /* Jarak antara input */
-    transition: border-color 0.3s; /* Transisi untuk efek hover */
+.register-header p {
+    color: #777; /* Lighter text for description */
+    font-size: 1rem;
 }
 
-.card input:focus {
-    border-color: #80bdff; /* Warna border saat input fokus */
-    outline: none; /* Menghilangkan outline default */
+/* Form inputs and labels */
+.input-group {
+    margin-bottom: 20px;
 }
 
-footer {
-    background-color: #343a40; /* Warna latar belakang footer */
-    color: #ffffff; /* Warna teks footer */
-    padding: 10px 0; /* Padding atas dan bawah */
-    text-align: center; /* Menyelaraskan teks di tengah */
-    position: relative; /* Memastikan footer tetap di bawah */
-    bottom: 0; /* Menempatkan footer di bagian bawah */
-    width: 100%; /* Memastikan footer mengambil lebar penuh */
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 6px; /* Slightly smaller rounded corners */
+    font-size: 1rem;
+    background-color: #f9f9f9; /* Soft background for inputs */
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #5c6bc0; /* Subtle blue on focus */
+    outline: none;
+}
+
+.invalid-feedback {
+    color: #e74c3c; /* Red error text */
+    font-size: 0.8rem;
+}
+
+/* Button styling */
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #5c6bc0; /* Subtle blue */
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px; /* Smaller border radius */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #3f51b5; /* Darker blue on hover */
+}
+
+/* Footer */
+.form-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-footer a {
+    color: #5c6bc0;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.form-footer a:hover {
+    color: #3f51b5;
 }
