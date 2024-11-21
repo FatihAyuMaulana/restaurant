@@ -45,6 +45,12 @@
             <input type="number" class="form-control" id="harga" name="harga" step="0.01" value="{{ old('harga') }}" required>
         </div>
 
+        <!-- Kategori -->
+        <div class="mb-3">
+            <label for="kategori" class="form-label">Kategori</label>
+            <input type="text" class="form-control" id="kategori" name="kategori" value="{{ old('kategori') }}" required>
+        </div>
+
         <!-- Deskripsi -->
         <div class="mb-3">
             <label for="deskripsi" class="form-label">Deskripsi</label>

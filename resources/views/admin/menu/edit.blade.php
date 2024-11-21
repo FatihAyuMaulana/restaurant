@@ -27,8 +27,9 @@
 
         <!-- Category Field -->
         <div class="form-group">
-            <label for="kategori">Kategori</label>
-            <input type="text" name="kategori" id="kategori" class="form-control" value="{{ old('kategori', $menu->kategori) }}" required>
+        <label for="kategori">Kategori</label>
+        <input type="text" name="kategori" id="kategori" class="form-control" value="{{ old('kategori', $menu->kategori) }}" required>
+
         </div>
 
         <!-- Food or Drink Selection -->

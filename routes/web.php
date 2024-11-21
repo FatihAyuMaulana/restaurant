@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RestaurantController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -21,8 +22,15 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/menu/create', [App\Http\Controllers\MenuController::class, 'create'])->name('admin.menu.create');  
 });
 
-
+Route::get('/admin/contacts', [App\Http\Controllers\ContactController::class, 'index'])->name('admin.contacts')->middleware('auth');
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
+
+// Menampilkan formulir kontak
+Route::get('/contact', [ContactController::class, 'create'])->name('contacts.contact');
+
+// Menyimpan pesan kontak
+Route::post('/contact', [ContactController::class, 'store'])->name('contacts.store');
+
 
 Route::get('/cart/add/{id}', [CartController::class, 'addToCart'])->name('cart.add');
 Route::get('/cart', [CartController::class, 'viewCart'])->name('cart.view');

@@ -72,20 +72,20 @@
                                                 {{-- Memeriksa apakah pengguna adalah admin --}}
                                                 {{-- NAVBAR UNTUK ADMIN --}}
                                                 {{-- <li><a href="{{ route('admin.dashboard') }}">Admin Dashboard</a></li>
-                                        <li><a href="{{ route('admin.users') }}">Manage Users</a></li>
-                                        <li><a href="{{ route('admin.settings') }}">Settings</a></li> --}}
+                                                <li><a href="{{ route('admin.users') }}">Manage Users</a></li>
+                                                <li><a href="{{ route('admin.settings') }}">Settings</a></li> --}}
                                                 <li><a href="">Admin Dashboard</a></li>
                                                 <li><a href="{{ route('user.index') }}">Manage Users</a></li>
                                                 <li><a href="{{ route('admin.menu.menu') }}">Menu</a></li>
                                                 <li><a href="{{ route('transactions.report') }}">Transaction</a></li>
-                                                {{-- <li><a href="">Settings Menu</a></li> --}}
+                                                <li><a href="">Contact</a></li> 
                                             @else
                                                 <li><a href="{{ url('/') }}">Home</a></li>
                                                 <li><a href="{{ url('menu') }}">Menu</a></li>
                                                 {{-- cart --}}
                                                 <li> <a href="{{ route('cart.view') }}">Cart</a>
                                                 </li>
-                                                <li><a href="{{ route('contact') }}">Contact</a></li>
+                                                <li><a href="{{ route('contacts.contact') }}">Contact</a></li>
                                                 {{-- <li><a href="{{ route('gourmet_spot') }}">Gourmet Spot</a></li> --}}
                                             @endif
 
@@ -138,5 +138,5 @@
             header.classList.remove("navbar-scrolled");
             console.log("Navbar not scrolled"); // Memastikan class dihapus
         }
-        };
+    };
 </script>

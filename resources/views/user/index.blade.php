@@ -13,6 +13,9 @@
                 <div class="card-header">{{ __('Manage User') }}</div>
 
                 <div class="text-left mb-2 mt-2 ml-2">
+                    <!-- Tombol Back -->
+                    <button onclick="window.history.back()" class="btn btn-secondary ml-2">Back</button>
+                    
                     <a href="{{ route('user.create') }}" class="btn btn-secondary">Add</a>
                 </div>
 
@@ -41,6 +44,7 @@
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Delete</button>
                                     </form>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
