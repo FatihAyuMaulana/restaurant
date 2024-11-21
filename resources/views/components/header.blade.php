@@ -1,4 +1,4 @@
-<style>
+    <style>
     .img-bg {
         filter: brightness(0.5);
         /* Mengurangi kecerahan gambar menjadi 50% */
@@ -67,6 +67,7 @@
                                         <li><a href="{{ route('contact') }}">Contact</a></li> --}}
                                             {{-- <li><a href="{{ route('gourmet_spot') }}">Gourmet Spot</a></li> --}}
                                         @else
+
                                             {{-- HARUS LOGIN --}}
                                             @if (Auth::user()->isAdmin())
                                                 {{-- Memeriksa apakah pengguna adalah admin --}}
@@ -88,9 +89,8 @@
                                                 <li><a href="{{ route('contacts.contact') }}">Contact</a></li>
                                                 {{-- <li><a href="{{ route('gourmet_spot') }}">Gourmet Spot</a></li> --}}
                                             @endif
-
-                                            <form action="{{ route('logout') }}" method="POST" id="form-logout"
-                                                style="display: none;">
+                                    
+                                            <form action="{{ route('logout') }}" method="POST" id="form-logout" style="display: none;">
                                                 @csrf
                                             </form>
                                         @endif
@@ -100,15 +100,26 @@
                             <!-- Header Right (login/register/logout) -->
                             <div class="header-right-btn f-right d-none d-lg-block ml-20">
                                 @if (Auth::check())
-                                    <a href="#" onclick="$('#form-logout').submit()"
-                                        class="border-btn header-btn btn-secondary">Logout</a>
+                                <a href="#" onclick="$('#form-logout').submit()" class="border-btn header-btn btn-secondary">
+                                    <!-- Ikon Sign-out (Keluar) -->
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </a>
+                                
+                                
                                     <form id="form-logout" action="{{ route('logout') }}" method="POST"
                                         style="display: none;">
                                         @csrf
                                     </form>
                                 @else
-                                    <a href="{{ route('login') }}" class="border-btn header-btn">Login</a>
-                                    <a href="{{ route('register') }}" class="border-btn header-btn">Register</a>
+                                <a href="{{ route('login') }}" class="border-btn header-btn">
+                                    <!-- Ikon Login -->
+                                    <i class="fas fa-sign-in-alt"></i> Login
+                                </a>
+                                <a href="{{ route('register') }}" class="border-btn header-btn">
+                                    <!-- Ikon Register -->
+                                    <i class="fas fa-user-plus"></i> Register
+                                </a>
+                                
                                 @endif
                             </div>
                         </div>
@@ -138,5 +149,5 @@
             header.classList.remove("navbar-scrolled");
             console.log("Navbar not scrolled"); // Memastikan class dihapus
         }
-    };
+};
 </script>

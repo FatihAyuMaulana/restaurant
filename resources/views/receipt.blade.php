@@ -54,6 +54,7 @@
         .back-btn {
             display: inline-block;
             padding: 10px 20px;
+            background-color: #bcc7dd;
             background-color: #525358;
             color: rgb(253, 250, 250);
             text-decoration: none;
@@ -85,6 +86,9 @@
         </div>
 
         <p class="total">Total: Rp. {{ number_format($transaction->total_harga, 0, ',', '.') }}</p>
+
+        <!-- Button updated to redirect to the home page -->
+        <a href="{{ route('home') }}" class="back-btn">Kembali ke Home</a>
     </div>
 
     <!-- Button positioned in the bottom-left corner of the screen -->

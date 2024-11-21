@@ -36,14 +36,14 @@ class MenuController extends Controller
                 'name' => 'Es Teh',
                 'description' => 'Teh dingin dengan es batu.',
                 'price' => 'Rp 10.000',
-                'category' => 'Drink',
+                // 'category' => 'Drink',
                 'image' => 'es_teh.jpg',
             ],
             [
                 'name' => 'Jus Jeruk',
                 'description' => 'Jus jeruk segar.',
                 'price' => 'Rp 15.000',
-                'category' => 'Drink',
+                // 'category' => 'Drink',
                 'image' => 'jus_jeruk.jpg',
             ],
             // Add other drinks here
@@ -81,14 +81,46 @@ class MenuController extends Controller
         // Create new menu item
         Menu::create($validated);
 
-        return redirect()->route('menu.index')->with('success', 'Menu added successfully');
+        return redirect()->route('admin.menu.menu')->with('success', 'Menu added successfully');
     }
 
     // Show form to edit a menu item
-    public function edit(Menu $menu)
-    {
-        return view('admin.menu.edit', compact('menu'));
+    public function edit($id)
+{
+    $menu = Menu::findOrFail($id); // Ambil data berdasarkan ID
+    return view('admin.menu.edit', compact('menu')); // Kirim data ke view
+}
+
+
+    public function update(Request $request, $id)
+{
+    $menu = Menu::findOrFail($id); // Ambil data menu berdasarkan ID
+
+    // Validasi input
+    $request->validate([
+        'nama_makanan' => 'required|string|max:255',
+        'deskripsi' => 'nullable|string',
+        'harga' => 'required|numeric',
+        'foto_makanan' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+    ]);
+
+    // Simpan gambar baru jika ada
+    $path = $menu->foto_makanan;
+    if ($request->hasFile('foto_makanan')) {
+        // Hapus gambar lama jika ada
+        if ($path) {
+            Storage::disk('public')->delete($path);
+        }
+        // Simpan gambar baru
+        $path = $request->file('foto_makanan')->store('menu_photos', 'public');
     }
+
+    // Update data menu
+    $menu->update(array_merge($request->all(), ['foto_makanan' => $path]));
+
+    return redirect()->route('admin.menu.menu')->with('success', 'Menu berhasil diupdate');
+}
+
 
     // Update a menu item in the database
     public function update(Request $request, Menu $menu)
@@ -118,12 +150,10 @@ class MenuController extends Controller
     }
 
     // Delete a menu item from the database
-    public function destroy(Menu $menu)
-    {
-        // Delete image if it exists
-        if ($menu->foto_makanan) {
-            Storage::disk('public')->delete($menu->foto_makanan);
-        }
+    public function delete($id)
+{
+    // Cari data menu berdasarkan ID
+    $menu = Menu::find($id);
 
         // Delete the menu item
         $menu->delete();

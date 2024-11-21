@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Restaurant; // Assuming you have a Restaurant model
+use App\Models\Contacts;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Mail;
@@ -50,5 +50,28 @@ class ContactController extends Controller
 
         // Redirect kembali ke halaman kontak dengan pesan sukses
         return redirect()->route('contact.create')->with('success', 'Pesan Anda telah berhasil dikirim.');
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 }
