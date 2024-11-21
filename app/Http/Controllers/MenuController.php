@@ -85,10 +85,12 @@ class MenuController extends Controller
     }
 
     // Show form to edit a menu item
-    public function edit(Menu $menu)
-    {
-        return view('admin.menu.edit', compact('menu'));
-    }
+    public function edit($id)
+{
+    $menu = Menu::findOrFail($id); // Ambil data berdasarkan ID
+    return view('admin.menu.edit', compact('menu')); // Kirim data ke view
+}
+
 
     public function update(Request $request, $id)
 {
@@ -116,7 +118,7 @@ class MenuController extends Controller
     // Update data menu
     $menu->update(array_merge($request->all(), ['foto_makanan' => $path]));
 
-    return redirect()->route('admin.menu.index')->with('success', 'Menu berhasil diupdate');
+    return redirect()->route('admin.menu.menu')->with('success', 'Menu berhasil diupdate');
 }
 
 
@@ -154,30 +156,26 @@ class MenuController extends Controller
     // }
     
     // Delete a menu item from the database
-    public function delete(Menu $menu)
-    {
-        if (!$menu) {
-            return redirect()->back()->with('error', 'Menu not found');
-        }
+    public function delete($id)
+{
+    // Cari data menu berdasarkan ID
+    $menu = Menu::find($id);
 
-        // Debugging untuk mengecek apakah menu ditemukan
-        logger()->info('Menu yang akan dihapus:', $menu->toArray());
-
-        if ($menu->foto_makanan) {
-            Storage::disk('public')->delete($menu->foto_makanan);
-        }
-
-        // Hapus data
-        $menu->delete();
-
-        // Debugging untuk mengecek apakah menu sudah terhapus
-        if ($menu->exists) {
-            logger()->error('Gagal menghapus menu:', $menu->toArray());
-            return redirect()->back()->with('error', 'Failed to delete menu');
-        }
-
-        return redirect()->route('admin.menu.menu')->with('success', 'Menu deleted successfully');
+    if (!$menu) {
+        return redirect()->back()->with('error', 'Menu not found');
     }
+
+    // Hapus file gambar jika ada
+    if ($menu->foto_makanan) {
+        Storage::disk('public')->delete($menu->foto_makanan);
+    }
+
+    // Hapus data menu
+    $menu->delete();
+
+    return redirect()->route('admin.menu.menu')->with('success', 'Menu deleted successfully');
+}
+
 
 
 

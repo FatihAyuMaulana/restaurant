@@ -441,7 +441,7 @@
                             <img src="{{ asset('assets/img/gallery/blog1.png')}}" alt="">
                         </div>
                         <div class="blog-cap">
-                            <span class="color1">23 Dec, 2020</span>
+                            <span class="color1">23 Dec, 2023</span>
                             <h4><a href="blog_details.html">Addiction When Food Plate Becomes</a></h4>
                         </div>
                     </div>
@@ -452,7 +452,7 @@
                             <img src="{{ asset('assets/img/gallery/blog2.png')}}" alt="">
                         </div>
                         <div class="blog-cap">
-                            <span class="color1">23 Dec, 2020</span>
+                            <span class="color1">21 Okct, 2024</span>
                             <h4><a href="blog_details.html">Addiction When Food Plate Becomes</a></h4>
                         </div>
                     </div>
@@ -463,7 +463,7 @@
                             <img src="{{ asset('assets/img/gallery/blog3.png')}}" alt="">
                         </div>
                         <div class="blog-cap">
-                            <span class="color1">23 Dec, 2020</span>
+                            <span class="color1">18 Dec, 2022</span>
                             <h4><a href="blog_details.html">Addiction When Food Plate Becomes</a></h4>
                         </div>
                     </div>

@@ -55,8 +55,11 @@
                                     <span>Rp. {{ number_format($food['harga'], 0, ',', '.') }}</span>
                                     <h4>{{ $food['nama_makanan'] }}</h4>
                                     <p>{{ $food['deskripsi'] }}</p>
-                                    <a href="{{ route('cart.add', ['id' => $food['id']]) }}" class="btn order-btn">Order
-                                        Now</a>
+                                    <a href="{{ route('cart.add', ['id' => $food['id']]) }}" class="btn order-btn">
+                                        <!-- Ikon Cart Plus (Menambah ke Keranjang) -->
+                                        <i class="fas fa-cart-plus"></i> Order Now
+                                    </a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -90,8 +93,10 @@
                                     <span>Rp. {{ number_format($drink['harga'], 0, ',', '.') }}</span>
                                     <h4>{{ $drink['nama_makanan'] }}</h4>
                                     <p>{{ $drink['deskripsi'] }}</p>
-                                    <a href="{{ route('cart.add', ['id' => $food['id']]) }}" class="btn order-btn">Order
-                                        Now</a>
+                                    <a href="{{ route('cart.add', ['id' => $food['id']]) }}" class="btn order-btn">
+                                        <i class="fas fa-cart-plus"></i> Order Now
+                                    </a>
+                                    
                                 </div>
                             </div>
                         </div>

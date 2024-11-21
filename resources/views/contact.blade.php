@@ -56,16 +56,16 @@
                         </div>
 <br>
 <br>
-                        <button type="submit" class="btn">Submit Now</button>
+<button type="submit" class="btn">
+    <!-- Ikon Paper Plane (Tanda Kirim) -->
+    <i class="fas fa-paper-plane"></i> Submit Now
+</button>
+
 
                     </form>
                 </div>
             </div>
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/place/Jasa+Snack+%26+Catering+-+Intan+Snack/@-7.3856822,109.3628782,17z/data=!3m1!4b1!4m6!3m5!1s0x2e655963f663e173:0xea07d8955a926292!8m2!3d-7.3856875!4d109.3654531!16s%2Fg%2F11v9jkjhjk?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"
-                    height="470" style="border:0;" allowfullscreen=""></iframe>
-            </div>
+           
         </div>
     </section>
     <!-- Contact Section End -->
