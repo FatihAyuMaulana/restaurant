@@ -18,7 +18,15 @@
                     </div>
                 </div>
 
-            <a href="{{ url('admin/menu/create') }}" class="btn btn-secondary mb-3">Add Menu</a>
+                <a href="{{ url('admin/menu/create') }}" class="btn btn-secondary mb-3">
+                    <!-- Ikon Add Menu -->
+                    <i class="fas fa-plus"></i> Add Menu
+                </a>
+                <a href="{{ route('home') }}" class="btn btn-secondary mb-3">
+                    <!-- Ikon Panah Kiri -->
+                    <i class="fas fa-arrow-left"></i> Kembali
+                </a>
+                
                 
 
                 <div class="row justify-content-center">
@@ -60,15 +68,21 @@
                                                 <h4>{{ $food['nama_makanan'] }}</h4>
                                                 <p>{{ $food['deskripsi'] }}</p>
                                                 <!-- Edit and Delete buttons -->
-                                                <a href="{{ route('menu.edit', $food['id']) }}"
-                                                    class="btn btn-primary btn-sm mt-2">Edit</a>
+                                                <a href="{{ route('menu.edit', $food['id']) }}" class="btn btn-primary btn-sm mt-2">
+                                                    <!-- Ikon Edit -->
+                                                    <i class="fas fa-edit"></i> Edit
+                                                </a>
+                                                
                                                 <form action="{{ route('menu.delete', $food['id']) }}" method="POST"
                                                     class="d-inline">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm mt-2"
-                                                        onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
-                                                </form>
+                                                    <button type="submit" class="btn btn-danger btn-sm mt-2" 
+                                                    onclick="return confirm('Are you sure you want to delete this item?');">
+                                                <!-- Ikon Delete -->
+                                                <i class="fas fa-trash-alt"></i> Delete
+                                            </button>
+                                            
                                             </div>
                                         </div>
                                     </div>

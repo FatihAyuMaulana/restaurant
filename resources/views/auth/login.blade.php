@@ -2,6 +2,8 @@
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+<!-- Memuat Font Awesome untuk ikon -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -37,7 +39,10 @@
             </div>
 
             <div class="auth-footer">
-                <button type="submit" class="auth-btn">{{ __('Login') }}</button>
+                <!-- Tombol Login dengan Ikon Pengguna -->
+                <button type="submit" class="auth-btn">
+                    <i class="fas fa-user"></i> {{ __('Login') }}
+                </button>
                 {{-- @if (Route::has('password.request'))
                     <a href="{{ route('password.request') }}" class="auth-link">{{ __('Forgot Your Password?') }}</a>
                 @endif --}}

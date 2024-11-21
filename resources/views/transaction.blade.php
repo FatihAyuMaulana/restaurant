@@ -88,8 +88,12 @@
                             <td>
                                 {{-- <a href="{{ route('cart.receipt', $transaction->id) }}" class="btn btn-secondary"
                                     style="padding: 8px 16px; font-size: 1rem;" target="_blank">Lihat Struk</a> --}}
-                                <button onclick="printReceipt('{{ route('cart.receipt', $transaction->id) }}')"
-                                    class="btn-secondary btn-sm" style="padding: 8px 16px; font-size: 1rem;">Cetak</button>
+                                    <button onclick="printReceipt('{{ route('cart.receipt', $transaction->id) }}')"
+                                        class="btn-secondary btn-sm" style="padding: 8px 16px; font-size: 1rem;">
+                                    <!-- Ikon Printer -->
+                                    <i class="fas fa-print"></i> Cetak
+                                </button>
+                                
                             </td>
                         </tr>
                     @endforeach
@@ -97,8 +101,11 @@
             </table>
         @endif
 
-
-    <a href="{{ url("/admin/menu") }}" class="btn btn-primary mt-3 mb-3">Back to Menu</a>
+        <a href="{{ url('/admin/dashboard') }}" class="btn btn-primary mt-3 mb-3">
+            <!-- Ikon Kembali -->
+            <i class="fas fa-arrow-left"></i> Kembali
+        </a>
+        
 </div>
     <script>
         function printReceipt(url) {

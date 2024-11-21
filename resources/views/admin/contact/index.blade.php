@@ -5,7 +5,10 @@
 <h1 class="page-title">Daftar Message</h1>
 
 <!-- Tombol Kembali ke Home -->
-<a href="{{ route('home') }}" class="btn btn-secondary mb-3">Kembali</a>
+<a href="{{ route('home') }}" class="btn btn-secondary mb-3">
+    <!-- Ikon Panah Kiri -->
+    <i class="fas fa-arrow-left"></i> Kembali
+</a>
 
 
 <table class="contact-table">

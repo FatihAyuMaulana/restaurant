@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h2>Edit Menu Item</h2>
-    <form action="{{ url('/admin/menu/update',  $menu->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.menu.update',  $menu->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <!-- Name Field -->
@@ -51,7 +51,7 @@
         </div>
 
         <!-- Submit Button -->
-        <button type="submit">Update Menu</button>
+        <button type="submit" class="btn btn-success">update Menu</button>
         <a href="{{ route('admin.menu.menu') }}" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
